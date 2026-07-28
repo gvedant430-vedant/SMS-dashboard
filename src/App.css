@@ -1,0 +1,13 @@
+.main-layout{
+    display:flex;
+    min-height:calc(100vh - 70px);
+}
+
+.content{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    min-height:calc(100vh - 70px);
+    padding:20px;
+    background:#f2f4f8;
+}

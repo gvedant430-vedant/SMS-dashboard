@@ -1,0 +1,71 @@
+/* Sidebar */
+.sidebar {
+  width: 280px;
+  min-height: 100vh;
+  background: #16243b;
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 80px; /* navbar ki height */
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.menu-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:15px 20px;
+    color:#fff;
+    text-decoration:none;
+    cursor:pointer;
+    transition:.3s;
+    font-size:16px;
+    font-weight:500;
+}
+
+.menu-item:hover{
+    background:#0d6efd;
+}
+
+.menu-item svg{
+    font-size:18px;
+}
+
+
+
+.submenu{
+    background:#28384b;
+}
+
+.submenu-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 50px;
+    color:#ddd;
+    text-decoration:none;
+    transition:.3s;
+    font-size:15px;
+}
+
+.submenu-item:hover{
+    background:#0d6efd;
+    color:#fff;
+}
+
+.active{
+    background:#0d6efd;
+}
+
+.sidebar::-webkit-scrollbar{
+    width:6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+    background:#666;
+}
+.arrow{
+    margin-left: auto;
+}
+

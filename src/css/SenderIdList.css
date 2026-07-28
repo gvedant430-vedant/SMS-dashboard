@@ -1,0 +1,31 @@
+.sender-list{
+    width:90%;
+    margin: 30px auto;
+}
+
+.search-container{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+
+.search-container input{
+    width: 380px;
+    height: 55px;
+    padding-left: 20px;
+    border: 1px solid #d3d3d3;
+    border-radius: 18px;
+    font-size: 18px;
+}
+
+.table{
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.th{
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: left;
+}

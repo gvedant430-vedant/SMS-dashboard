@@ -1,0 +1,49 @@
+.templateManagement{
+    padding:20px;
+    background:#f5f7fb;
+    min-height:100vh;
+}
+
+.pageTitle{
+    font-size:28px;
+    font-weight:600;
+    color:#1f2937;
+    margin-bottom:20px;
+}
+
+/* Tabs */
+
+.tabs{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.tabBtn{
+    padding:12px 24px;
+    border:none;
+    border-radius:6px;
+    background:#e5e7eb;
+    color:#374151;
+    font-size:15px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.tabBtn:hover{
+    background:#d1d5db;
+}
+
+.activeTab{
+    background:#2563eb;
+    color:#fff;
+}
+
+/* Content */
+
+.tabContent{
+    background:#fff;
+    border-radius:8px;
+    padding:25px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}

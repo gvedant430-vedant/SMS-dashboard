@@ -1,0 +1,139 @@
+/* NewSpielyLink.css */
+
+.short-url-container {
+    width: 85%;
+    margin: 30px auto;
+}
+
+.short-url-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.tabs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.tabs button {
+    padding: 12px 35px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.tabs .active {
+    background-color: #f4c524;
+    color: black;
+}
+
+.form-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.row label {
+    width: 220px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.row input[type="text"],
+.row select {
+    flex: 1;
+    height: 50px;
+    border: 1px solid #d5d5d5;
+    border-radius: 5px;
+    padding: 0 15px;
+    font-size: 17px;
+    outline: none;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+}
+
+.radio-group input {
+    width: 18px;
+    height: 18px;
+}
+
+.row select {
+    max-width: 350px;
+}
+
+.row input[name="longUrl"],
+.row input[name="callbackUrl"] {
+    max-width: 500px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.buttons button {
+    border: none;
+    padding: 12px 35px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.buttons button[type="submit"] {
+    background-color: #39b36e;
+}
+
+.buttons button[type="button"] {
+    background-color: #ff4d5a;
+}
+
+.buttons button:hover {
+    opacity: 0.9;
+}
+
+/* View Table */
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 20px;
+}
+
+.table th,
+.table td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+.table th {
+    background-color: #f4c524;
+    font-size: 18px;
+}
+
+.table td {
+    font-size: 16px;
+}

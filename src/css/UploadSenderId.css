@@ -1,0 +1,120 @@
+.upload-container{
+  padding: 20px;
+}
+
+.upload-card{
+  max-width: 1200px;
+  margin: auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.upload-card form{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-row{
+  display: flex;
+  grid-template-columns: 280px 1fr;
+  align-items: center;
+  gap: 30px;
+}
+
+.from-row label{
+font-size: 16px;
+font-weight: 600;
+color: #333;
+}
+
+.radio-group{
+  display: flex;
+  gap:80px;
+  flex-wrap: wrap;
+}
+
+.radio-group label{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 400;
+}
+
+.form-row input[type="text"]
+.form-row select{
+  width: 100%;
+  height: 46px;
+  border: 1p solid #d6d6d6;
+  border-radius: 6px;
+  padding: 0 15px;
+  font-size: 16px;
+  outline: none;
+}
+
+.form-row select{
+cursor: pointer;
+}
+
+.file-section{
+display: flex;
+align-items: center;
+gap: 20px;
+}
+
+.file-section input[type="file"]{
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.reset-btn{
+  background: #d9d9d9;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  min-width: 120px;
+}
+
+.reset-btn:hover{
+  background: #c0c0c0;
+}
+
+.note{
+  margin-top: 10px;
+  margin-left: 310px;
+  color: #27ae60;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.form-row a{
+  margin-left: 310px;
+  color: #4b4bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.upload-btn{
+  width: 140px;
+  margin: 20px auto 0;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #39b56a;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.upload-btn:hover{
+  background: #2ea15b;
+}
