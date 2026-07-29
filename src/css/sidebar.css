@@ -1,8 +1,8 @@
 /* Sidebar */
 .sidebar {
-  width: 290px;
+  width: 340px;
   height: clac(100vh - 80px);
-  background: #ffffff;
+  background: #fff;
   color: #222;
   position: fixed;
   left: 0;
