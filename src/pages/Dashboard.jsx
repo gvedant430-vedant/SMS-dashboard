@@ -33,7 +33,7 @@ function Dashboard(){
     datasets:[
       {
         label:"SMS Count",
-        data:[0,0,0,0,0,0],
+        data:[1200,150,1050,980,70,40],
       backgroundColor:"#f4c542",
       },
     ],
@@ -57,7 +57,7 @@ function Dashboard(){
     datasets:[
       {
         label:"Hourly SMS",
-        data:[0,0,0,0,0,0,0,0,0,0,0,0],
+        data:[20,35,15,40,80,120,160,140,180,130,90,50],
         borderColor:"#f4c542",
         tension:0.4,
       },
@@ -70,17 +70,17 @@ function Dashboard(){
         <div className="cards">
       <Statcard
         title="Today's SMS Count"
-           value="0"
+           value="1200"
           icon="📅"/>
 
         <Statcard
         title="Current Month SMS Count"
-         value="0"
+         value="28500"
          icon="📅"/>
 
         <Statcard
          title="Available Credit"
-         value="0"
+         value="15000"
          icon="₹"/>
          </div>
 
@@ -98,12 +98,11 @@ function Dashboard(){
           </div>
          </div>
          </div>
-
+         
          <Footer/>
          </div>
         
         );
 }
-import { Form } from "react-router-dom";
 
 export default Dashboard;
