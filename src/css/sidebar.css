@@ -1,6 +1,6 @@
 /* Sidebar */
 .sidebar {
-  width: 280px;
+  width: 290px;
   height: clac(100vh - 80px);
   background: #ffffff;
   color: #222;
@@ -15,14 +15,14 @@
 .menu-item{
     display:flex;
     align-items:center;
-    gap:12px;
-    padding:15px 20px;
+    gap:15px;
+    padding:18px 25px;
     color:#222;
     text-decoration:none;
     cursor:pointer;
     transition:.3s;
-    font-size:16px;
-    font-weight:500;
+    font-size:17px;
+    font-weight:700;
 }
 
 .menu-item:hover{
@@ -44,10 +44,10 @@
     display:flex;
     align-items:center;
     gap:10px;
-    padding:12px 50px;
-    color:#555;
+    padding:16px 55px;
+    color:#222;
     text-decoration:none;
-    font-weight: 500;
+    font-weight: 900;
     font-size:15px;
 }
 
