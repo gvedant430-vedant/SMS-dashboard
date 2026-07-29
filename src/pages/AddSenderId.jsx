@@ -9,7 +9,7 @@ function AddSenderID(){
 
     return(
         <div className="add-sender-container">
-            <h1 className="page-title">Add sender Id</h1>
+            <h1 className="page-title">Add Sender ID</h1>
             <div className="tabs">
                 <button
                 className={activeTab==="add"?"tab active":"tab"}
