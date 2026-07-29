@@ -32,7 +32,14 @@ function Sidebar() {
      {/*DLT*/}
 
     <div className="menu-item "
-    onClick={()=> setDltOpen(!dltOpen)} >
+    onClick={()=> {
+      setDltOpen(!dltOpen);
+      setSpielyOpen(false);
+      setCampaignOpen(false);
+      setReportOpen(false);
+      setPhonebookopenOpen(false);
+      }} >
+
       <FaClipboardList/>
         <span className="menu-text"> DLT Management</span>
         <span className="arrow">
@@ -49,10 +56,13 @@ function Sidebar() {
 
         {/*Spiely Link*/}
         <div className="menu-item" 
-        onClick={()=>setSpielyOpen(!spielyOpen)}
-        >
+        onClick={()=>{
+           setSpielyOpen(!spielyOpen);
+             setDltOpen(false);
+             setCampaignOpen(false);
+              setReportOpen(false);
+                setPhonebookopenOpen(false);}}>
           <FaLink/>
-          
         <span className="menu-text"> Spiely Link Management</span>
         <span className="arrow">{spielyOpen?<FaChevronUp/>:<FaChevronDown/>}</span>
         </div>
@@ -66,7 +76,13 @@ function Sidebar() {
 
         {/*Campaign Management*/}
         <div className="menu-item" 
-        onClick={()=>setCampaignOpen(!campaignOpen)}>
+        onClick={()=>{
+       
+        setCampaignOpen(!campaignOpen);
+         setDltOpen(false);
+         setSpielyOpen(false);
+          setReportOpen(false);
+          setPhonebookopenOpen(false); }}>
           <FaBullhorn/>
             <span className="menu-text"> Campaign Management</span>
             <span className="arrow">{campaignOpen?<FaChevronUp/>:<FaChevronDown/>}</span>
@@ -84,7 +100,12 @@ function Sidebar() {
 
         {/*Report Management*/}
         <div className="menu-item" 
-        onClick={()=>setReportOpen(!reportOpen)}>
+        onClick={()=>{
+        setReportOpen(!reportOpen)
+        setDltOpen(false);
+        setSpielyOpen(false);
+        setCampaignOpen(false);
+        setPhonebookopenOpen(false);}}>
           <FaFileAlt/>
             <span className="menu-text"> Report Management</span>
             <span className="arrow">{reportOpen?<FaChevronUp/>:<FaChevronDown/>}</span>
@@ -105,7 +126,13 @@ function Sidebar() {
 
 {/*Phonebook*/}
 <div className="menu-item" 
-onClick={()=>setPhonebookopenOpen(!phonebookOpen)}>
+onClick={()=>{
+  setPhonebookopenOpen(!phonebookOpen);
+  setDltOpen(false);
+  setCampaignOpen(false);
+  setReportOpen(false);
+  setSpielyOpen(false);
+}}>
   <FaPhoneAlt/>
     <span className="menu-text">PhoneBook Management</span>
     <span className="arrow">{phonebookOpen?<FaChevronUp/>:<FaChevronDown/>}</span>
