@@ -24,7 +24,15 @@ function Sidebar() {
   return (
     <div className="sidebar">
 
-      <NavLink to="/dashboard" className="menu-item">
+      <NavLink to="/dashboard" 
+      className="menu-item"
+       onClick={() => {
+    setDltOpen(false);
+    setSpielyOpen(false);
+    setCampaignOpen(false);
+    setReportOpen(false);
+    setPhonebookopenOpen(false);
+  }}>
       <FaTachometerAlt/>
         <span>Dashboard</span>
       </NavLink>
@@ -147,13 +155,29 @@ onClick={()=>{
 
 {/*BlackList Contacts*/}
 
-      <NavLink to="/blacklist-contacts" className="menu-item">
+      <NavLink to="/blacklist-contacts" 
+      className="menu-item"
+      onClick={()=>{
+            setDltOpen(false);
+    setSpielyOpen(false);
+    setCampaignOpen(false);
+    setReportOpen(false);
+    setPhonebookopenOpen(false);
+      }}>
       <FaBan/>
          <span>Blacklist Contacts</span>
       </NavLink>
 
 {/*Credit History*/}
-      <NavLink to="/credit-history" className="menu-item">
+      <NavLink to="/credit-history" 
+      className="menu-item"
+       onClick={() => {
+    setDltOpen(false);
+    setSpielyOpen(false);
+    setCampaignOpen(false);
+    setReportOpen(false);
+    setPhonebookopenOpen(false);
+  }}>
        <FaCreditCard/>
         <span>Credit History</span>
       </NavLink>
