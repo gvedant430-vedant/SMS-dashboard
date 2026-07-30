@@ -6,7 +6,7 @@ function Login(){
     // const[email,setEmail]=useState("");
     // const[password,setPassword]=useState("");
     const navigate=useNavigate();
-    const[loginData,setLoginData]=useState({email:" ",password:" "});
+    const[loginData,setLoginData]=useState({email:"",password:""});
     const handleChange=(e)=>{
         setLoginData({
             ...loginData,
