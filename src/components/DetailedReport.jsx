@@ -9,81 +9,81 @@ function DetailedReport() {
   const [toDate, setToDate] = useState(new Date());
 
   return (
-    <div className="detailed-report-container">
-      <h1 className="report-title">Detailed Report</h1>
+    <div className="detailedreport-container">
+      <h1 className="detailedreport-title">Detailed Report</h1>
 
-      <div className="report-card">
-        <div className="form-row">
+      <div className="detailedreport-card">
+        <div className="detailedreport-formRow">
           {/* From Date */}
-          <div className="form-group">
+          <div className="detailedreport-formGroup">
             <label>From Date:</label>
 
-            <div className="date-picker-wrapper">
+            <div className="detailedreport-datePickerwrapper">
               <DatePicker
                 selected={fromDate}
                 onChange={(date) => setFromDate(date)}
                 dateFormat="dd-MM-yyyy"
-                className="date-input"
+                className="detailedreport-dateInput"
               />
-              <FaRegCalendarAlt className="calendar-icon" />
+              <FaRegCalendarAlt className="detailedreport-calendarIcon" />
             </div>
           </div>
 
           {/* To Date */}
-          <div className="form-group">
+          <div className="detailedreport-formGroup">
             <label>To Date:</label>
 
-            <div className="date-picker-wrapper">
+            <div className="detailedreport-datePickerWrapper">
               <DatePicker
                 selected={toDate}
                 onChange={(date) => setToDate(date)}
                 dateFormat="dd-MM-yyyy"
-                className="date-input"
+                className="detailedreport-dateInput"
               />
-              <FaRegCalendarAlt className="calendar-icon" />
+              <FaRegCalendarAlt className="detailedreport-calendarIcon" />
             </div>
           </div>
 
           {/* Mobile Number */}
-          <div className="form-group">
+          <div className="detailedreport-formGroup">
             <label>Mobile Number:</label>
             <input
               type="text"
               placeholder="Enter Mobile Number"
-              className="input-field"
+              className="detailedreport-inputField"
             />
           </div>
         </div>
 
-        <div className="form-row">
+        <div className="detailedreport-formRow">
           {/* Sender ID */}
-          <div className="form-group">
+          <div className="detailedreport-formGroup">
             <label>Sender ID:</label>
             <input
               type="text"
               placeholder="Enter Sender Id"
-              className="input-field"
+              className="detailedreport-inputField"
             />
           </div>
 
           {/* Message ID */}
-          <div className="form-group">
+          <div className="detailedreport-formGroup">
             <label>Message ID:</label>
             <input
               type="text"
               placeholder="Enter Message Id"
-              className="input-field"
+              className="detailedreport-inputField"
             />
           </div>
 
-          <div className="btn-box">
-            <button className="submit-btn">Submit</button>
+          <div className="detailedreport-btnBox">
+            <button className="detailedreport-submitBtn">Submit</button>
           </div>
         </div>
       </div>
 
-      <div className="table-section">
-        <table>
+      <div className="detailedreport-tableSection">
+        <table className="detailedreport-table"> 
           <thead>
             <tr>
               <th>RECEIVE DATE</th>
@@ -98,14 +98,14 @@ function DetailedReport() {
 
           <tbody>
             <tr>
-              <td colSpan="7" className="no-data">
+              <td colSpan="7" className="detailedreport-noData">
                 No Data Available
               </td>
             </tr>
           </tbody>
         </table>
 
-        <p className="entries-text">
+        <p className="detailedreport-entriesText">
           There are total <strong>0</strong> entries
         </p>
       </div>

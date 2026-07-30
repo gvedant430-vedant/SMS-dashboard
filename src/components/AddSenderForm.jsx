@@ -33,14 +33,14 @@ function AddSenderform() {
   };
 
   return (
-    <div className="sender-card">
+    <div className="addsenderform-card">
       <form onSubmit={handleSubmit}>
 
         {/* Sender Type */}
-        <div className="form-group">
+        <div className="addsenderform-formGroup">
           <label>Sender ID Type:</label>
 
-          <div className="radio-group">
+          <div className="addsenderform-radioGroup">
             <label>
               <input
                 type="radio"
@@ -66,7 +66,7 @@ function AddSenderform() {
         </div>
 
         {/* Entity ID */}
-        <div className="form-group">
+        <div className="addsenderform-formGroup">
           <label>New / Existing Entity ID:</label>
 
           <select
@@ -82,7 +82,7 @@ function AddSenderform() {
         </div>
 
         {/* Header ID */}
-        <div className="form-group">
+        <div className="addsenderform-formGroup">
           <label>Header ID:</label>
 
           <input
@@ -95,7 +95,7 @@ function AddSenderform() {
         </div>
 
         {/* Sender ID */}
-        <div className="form-group">
+        <div className="addsenderform-formgroup">
           <label>Sender ID:</label>
 
           <input
@@ -108,7 +108,7 @@ function AddSenderform() {
         </div>
 
         {/* Button */}
-        <div className="btn-box">
+        <div className="addsenderform-btnBox">
           <button type="submit">Add</button>
         </div>
 

@@ -10,21 +10,21 @@ function DltChainRegistration() {
   };
 
   return (
-    <div className="dlt-page">
+    <div className="dltchainregistration-container">
 
-      <h1 className="dlt-title">DLT Chain Registration</h1>
+      <h1 className="dltchainregistration-title">DLT Chain Registration</h1>
 
-      <div className="dlt-card">
+      <div className="dltchainregistration-card">
         <form onSubmit={handleSubmit}>
           <input
             type="text"
             placeholder="Enter DLT Chain Number"
             value={dltValue}
             onChange={(e) => setDltValue(e.target.value)}
-            className="dlt-input"
+            className="dltchainregistration-input"
           />
 
-          <div className="input-info">
+          <div className="dltchainregistration-inputInfo">
             <h2>
               Input String:
               <span> PEID, TM1ID, TM2ID, TVL</span>
@@ -36,14 +36,14 @@ function DltChainRegistration() {
             </p>
           </div>
 
-          <button type="submit" className="submit-btn">
+          <button type="submit" className="dltchainregistration-submitBtn">
             Submit
           </button>
         </form>
       </div>
 
-      <div className="table-card">
-        <table>
+      <div className="dltchainregistration-tableCard">
+        <table className="dltchainregistration-table">
           <thead>
             <tr>
               <th>DLT VALUE</th>

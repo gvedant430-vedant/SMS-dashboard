@@ -9,39 +9,39 @@ function ClickerReport() {
   const [toDate, setToDate] = useState(new Date());
 
   return (
-    <div className="clicker-report">
-      <h1 className="clicker-title">Clicker Report</h1>
+    <div className="clickerreport-container">
+      <h1 className="clickereport-title">Clicker Report</h1>
 
-      <div className="filter-card">
-        <div className="field">
+      <div className="clickreportfilterCard">
+        <div className="clickreport-field">
           <label>From Date:</label>
 
-          <div className="date-wrapper">
+          <div className="clickreport-dateWrapper">
             <DatePicker
               selected={fromDate}
               onChange={(date) => setFromDate(date)}
               dateFormat="dd-MM-yyyy"
-              className="date-input"
+              className="clickerreport-dateInput"
             />
-            <FaRegCalendarAlt className="calendar-icon" />
+            <FaRegCalendarAlt className="clickreport-calendarIcon" />
           </div>
         </div>
 
-        <div className="field">
+        <div className="clickreport-field">
           <label>To Date:</label>
 
-          <div className="date-wrapper">
+          <div className="clickreport-dateWrapper">
             <DatePicker
               selected={toDate}
               onChange={(date) => setToDate(date)}
               dateFormat="dd-MM-yyyy"
-              className="date-input"
+              className="clickerreport-dateInput"
             />
-            <FaRegCalendarAlt className="calendar-icon" />
+            <FaRegCalendarAlt className="clickreport-calendarIcon" />
           </div>
         </div>
 
-        <div className="field">
+        <div className="clickreport-field">
           <label>Mobile Number:</label>
 
           <input
@@ -51,11 +51,11 @@ function ClickerReport() {
           />
         </div>
 
-        <button className="submit-btn">Submit</button>
+        <button className="clickreport-submitBtn">Submit</button>
       </div>
 
-      <div className="table-section">
-        <table>
+      <div className="clickreport-tableSection">
+        <table className="clickreport-table">
           <thead>
             <tr>
               <th>CAMPAIGN NAME</th>
@@ -69,14 +69,14 @@ function ClickerReport() {
 
           <tbody>
             <tr>
-              <td colSpan="6" className="no-data">
+              <td colSpan="6" className="clickreport-noData">
                 No Data Available
               </td>
             </tr>
           </tbody>
         </table>
 
-        <div className="entry-text">
+        <div className="clickreport-entryText">
           There are total <strong>0</strong> entries
         </div>
       </div>

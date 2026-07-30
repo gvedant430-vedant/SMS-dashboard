@@ -79,13 +79,13 @@ function AddContentTemplate(){
 
     return(
 
-        <div className="template-managment">
+        <div className="addcontent-template-container">
     {/*Form*/}
-            <div className="templateCard">
+            <div className="addcontent-templateCard">
     {/*Content Template Type*/}
-                <div className="formGroup">
+                <div className="addcontent-template-formGroup">
                     <label>Content Template Type:</label>
-                    <div className="radioGroup">
+                    <div className="addcontent-template-radioGroup">
                         <label>
                             <input 
                             type="radio" 
@@ -117,7 +117,7 @@ function AddContentTemplate(){
                 </div>
 
     {/*Sender ID*/}
-                <div className="formGroup"
+                <div className="addcontent-template-formGroup"
                 name="senderId"
                 value={formData.senderId}
                 onChange={handleChange}>
@@ -126,7 +126,7 @@ function AddContentTemplate(){
                     name="senderId"
                     value={formData.senderId}
                     onChange={handleChange}>
-                        <option value=" ">--Select--</option>
+                        <option value="">--Select--</option>
                         <option value="ABCDEF">ABCDEF</option>
                         <option value="ONEXTL">ONEXTL</option>
                     </select>
@@ -137,7 +137,7 @@ function AddContentTemplate(){
               
             
     {/*Entity ID*/}
-                <div className="formGroup">
+                <div className="addcontent-template-formGroup">
                     <label>Entity ID:</label>
                     <input
                     type="text"
@@ -152,7 +152,7 @@ function AddContentTemplate(){
 
                 
     {/*Template Name*/}
-                <div className="formGroup">
+                <div className="addcontent-template-formGroup">
                     <label>Content Template Name:</label>
                     <input
                     type="text"
@@ -169,7 +169,7 @@ function AddContentTemplate(){
                 
                 
     {/*Template description*/}
-                <div className="formGroup">
+                <div className="addcontent-template-formGroup">
                     <label>Content Template Description:</label>
                     <textarea
                     name="templateDescription"
@@ -185,7 +185,7 @@ function AddContentTemplate(){
                 </div>
 
     {/*Operator Template ID*/}
-                <div className="formGroup">
+                <div className="addcontent-template-formGroup">
                     <label>Operator Template ID:</label>
                     <input 
                     type="text"
@@ -202,7 +202,7 @@ function AddContentTemplate(){
                 </div>
                
     {/*Template Type*/}
-                <div className="formGroup">
+                <div className="addcontent-template-formGroup">
                 <label> TemplateType:</label>
                     <div className="radioGroup">
                         <label>
@@ -228,9 +228,9 @@ function AddContentTemplate(){
                 
                 
     {/*Message Text*/}
-                    <div className="formGroup messageRow">
+                    <div className="addcontent-template-messageRow">
                      <label>Message Text:</label>
-                      <div className="messageBox">
+                      <div className="addcontent-template-messageBox">
                     <textarea
                         name="messageText"
                         value={formData.messageText}
@@ -254,7 +254,7 @@ function AddContentTemplate(){
                 
                 
     {/*Status*/}
-                <div className="formGroup">
+                <div className="addcontent-template-formGroup">
                     <label>Status:</label>
                     <select 
                     name="status"
@@ -268,18 +268,18 @@ function AddContentTemplate(){
                 
     {/*Buttons*/}
     <form onSubmit={handleSubmit}>
-                <div className="buttongroup">
-                    <button className="previewBtn"
-                    type="submit">
-                        Preview
-                    </button>
+    <div className="addcontent-template-buttongroup">
+    <button className="addcontetn-template-previewBtn"
+       type="submit">
+          Preview
+         </button>
 
-                    <button className="cancelBtn"
+       <button className="addcontent-tempalte-cancelBtn"
                     type="button">
                         Cancel
                     </button>
                 </div>
-</form>
+                </form>
             </div>
         </div>
     );

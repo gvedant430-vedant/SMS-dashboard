@@ -2,13 +2,13 @@ import { useState } from "react";
 import"../css/DynamicCampaign.css";
 function DynamicCampaign(){
     const[formData,setFormData]=useState({
-        camaignName:"user4-campaign-1707206-1500",
+        campaignName:"user4-campaign-1707206-1500",
         messageEncoding:"SMS",
         file:null,
         messageType:"Transactional",
         senderId:"",
         templateName:"",
-        mobilenumber:"",
+        mobileNumber:"",
         columnList:"",
         messageText:"",
         shortUrl:"",
@@ -44,7 +44,7 @@ function DynamicCampaign(){
                 <input
                 type="text"
                 name="campaignName"
-                value={formData.camaignName}
+                value={formData.campaignName}
                 onChange={handleChange}/>
                 <p className="note">
                     NOTE:Special charaters are not allowed in campaign name.
@@ -98,7 +98,7 @@ function DynamicCampaign(){
                     type="radio"
                     name="messageType"
                     value="Transactional"
-                    checked={formData.messageType==="Tranactional"}
+                    checked={formData.messageType==="Transactional"}
                     onChange={handleChange}/>
                     Transactional
                 </label>

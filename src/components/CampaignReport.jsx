@@ -9,51 +9,51 @@ function CampaignReport() {
   const [toDate, setToDate] = useState(new Date());
 
   return (
-    <div className="campaign-container">
-      <h1 className="campaign-title">Campaign Report</h1>
+    <div className="campaignreport-container">
+      <h1 className="campaignreport-title">Campaign Report</h1>
 
-      <div className="report-card">
-        <div className="date-group">
+      <div className="campaignreport-card">
+        <div className="campaignreport-dateGroup">
           <label>From Date:</label>
 
-          <div className="date-picker-box">
+          <div className="campaignreport-datePickerBox">
             <DatePicker
               selected={fromDate}
               onChange={(date) => setFromDate(date)}
               dateFormat="dd-MM-yyyy"
             />
-            <FaCalendarAlt className="calendar-icon" />
+            <FaCalendarAlt className="campaignreport-calendarIcon" />
           </div>
         </div>
 
-        <div className="date-group">
+        <div className="campaignreport-dateGroup">
           <label>To Date:</label>
 
-          <div className="date-picker-box">
+          <div className="campaignreport-datePickerBox">
             <DatePicker
               selected={toDate}
               onChange={(date) => setToDate(date)}
               dateFormat="dd-MM-yyyy"
             />
-            <FaCalendarAlt className="calendar-icon" />
+            <FaCalendarAlt className="campaignreport-calendarIcon" />
           </div>
         </div>
 
-        <div className="btn-section">
-          <button className="submit-btn">Submit</button>
-          <button className="download-btn">Download</button>
+        <div className="campaignreport-btnSection">
+          <button className="campaignreport-submitBtn">Submit</button>
+          <button className="campaignreport-downloadBtn">Download</button>
         </div>
       </div>
 
-      <div className="search-section">
+      <div className="campaignreport-searchSection">
         <input
           type="text"
           placeholder="Search Campaign Report"
-          className="search-box"
+          className="campaignreport-searchBox"
         />
       </div>
 
-      <table className="report-table">
+      <table className="campaignreport-table">
         <thead>
           <tr>
             <th>SUMMARY DATE</th>
@@ -69,14 +69,14 @@ function CampaignReport() {
 
         <tbody>
           <tr>
-            <td colSpan="8" className="no-data">
+            <td colSpan="8" className="campaignreport-noData">
               No Data Available
             </td>
           </tr>
         </tbody>
       </table>
 
-      <p className="entries-text">There are total 0 entries</p>
+      <p className="campaignreport-entriesText">There are total 0 entries</p>
     </div>
   );
 }

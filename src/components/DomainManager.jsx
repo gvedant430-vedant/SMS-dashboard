@@ -29,17 +29,17 @@ function DomainManager(){
         };
 
     return(
-        <div className="domain-container">
-            <h1>Domain Manager..</h1>
+        <div className="domainmanager-container">
+            <h1 className="domainmanager-title">Domain Manager..</h1>
             {/*Tabs*/}
-            <div className="tabs">
+            <div className="domainmanager-tabs">
                 <button
-                className={activeTab==="add"?"active":""}
+                className={activeTab==="add"?"domainmanager-active":""}
                 onClick={()=>setActiveTab("add")}>
                     Add Domain
                 </button>
                 <button
-                className={activeTab==="view"?"active":""}
+                className={activeTab==="view"?"domainmanager-active":""}
                 onClick={()=>setActiveTab("view")}>
                     View Domain
                 </button>
@@ -47,8 +47,8 @@ function DomainManager(){
 
             {/*ADD DOMIN*/}
             {activeTab==="add"&&(
-                <form className="form-card" onSubmit={handleSubmit}>
-                    <div className="row">
+                <form className="domainmanager-formCard" onSubmit={handleSubmit}>
+                    <div className="domainmanager-row">
                         <label>Title</label>
                         <input
                         type="text"
@@ -57,7 +57,7 @@ function DomainManager(){
                         value={formData.title}
                         onChange={handleChange}/>
                     </div>
-                    <div className="row">
+                    <div className="domainmanager-row">
                         <label>Domain</label>
                         <input
                         type="text"
@@ -66,11 +66,11 @@ function DomainManager(){
                         value={formData.domain}
                         onChange={handleChange}/>
                     </div>
-                    <p className="note">
+                    <p className="domainmanager-note">
                           * Reduce message length. Enter the domain name
             without http/https.
                     </p>
-                    <div className="buttons">
+                    <div className="domainmanager-buttons">
                         <button type="submit">Add</button>
                         <button type="button" onClick={handleReset}>
                             Cancel
@@ -80,15 +80,15 @@ function DomainManager(){
             )}
             {/* VIEW DOMAIN */}
             {activeTab === "view" && (
-                <div className=" view-container">
+                <div className=" domainmanager-viewContainer">
 
-                    <div className="search-wrapper">
+                    <div className="domainmanager-searchWrapper">
                         <label>Search:</label>
                         <input
                         type="text"
                         placeholder="Search Domain Name"/>
                     </div>
-                    <table className="view-table">
+                    <table className="domainmanager-viewTable">
                         <thead>
                             <tr>
                                 <th>S.NO</th>
@@ -100,7 +100,7 @@ function DomainManager(){
 
                         <tbody>
                             <tr>
-                                <td colSpan="4" className="no-data">
+                                <td colSpan="4" className="domainmanager-noData">
                                     No Data Available
                                 </td>
                             </tr>
