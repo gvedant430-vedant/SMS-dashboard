@@ -5,7 +5,7 @@ import Sidebar from "./Sidebar";
 import"../App.css";
 
 function Layout(){
-    const[sidebarOpen,setSidebarOpen]=useState(true);
+    const[sidebarOpen,setSidebarOpen]=useState(false);
 
     const  toggleSidebar=()=>{
         setSidebarOpen(!sidebarOpen);
@@ -16,7 +16,7 @@ function Layout(){
     
         <Navbar toggleSidebar={toggleSidebar}/>
         <div className="main-layout">
-            {sidebarOpen&&<Sidebar/>}
+            <Sidebar isOpen={sidebarOpen}/>
 
             <div className="content">
                 <Outlet/>

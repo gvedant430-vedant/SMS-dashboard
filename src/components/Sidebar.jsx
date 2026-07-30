@@ -14,7 +14,7 @@ import{ FaTachometerAlt ,
   FaCreditCard,
 } from "react-icons/fa";
 
-function Sidebar() {
+function Sidebar({isOpen}) {
     const[dltOpen,setDltOpen]=useState(false);
     const[spielyOpen,setSpielyOpen]=useState(false);
     const[campaignOpen,setCampaignOpen]=useState(false);
@@ -22,7 +22,7 @@ function Sidebar() {
     const[phonebookOpen,setPhonebookopenOpen]=useState(false);
 
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${isOpen ? "sidebar-open":""}`}>
 
       <NavLink to="/dashboard" 
       className="menu-item"
