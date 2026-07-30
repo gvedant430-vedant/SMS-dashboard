@@ -1,8 +1,16 @@
-// import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {FaBars,FaUserCircle,FaSignOutAlt} from"react-icons/fa";
 import "../css/navbar.css";
 
 function Navbar({toggleSidebar}){
+
+    const navigate= useNavigate();
+
+    const handleLogout=()=>{
+        localStorage.removeItem("isLoggedIn");
+        navigate("/");
+    };
+
     return(
         <nav className="navbar">
             <div className="nav-left">
@@ -22,8 +30,9 @@ function Navbar({toggleSidebar}){
           <FaUserCircle />
           <span>user4</span>
         </div>
+
         {/*Logout*/}
-        <button className="logout-btn">
+        <button className="logout-btn" onClick={handleLogout}>
           <FaSignOutAlt />
          <span>Logout</span>
         </button>
