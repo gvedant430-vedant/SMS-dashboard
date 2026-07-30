@@ -62,12 +62,29 @@
 
 @media (max-width:768px){
 
+    .navbar{
+        padding: 0 15px;
+    }
+
   .nav-right{
     gap:10px;
-    flex-wrap:wrap;
+    
   }
 
   .login-info{
     display:none;
+  }
+  .logout-btn{
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .logout-btn span{
+    display: none;
+  }
+
+  .user svg{
+    font-size: 28px;
+    
   }
 }

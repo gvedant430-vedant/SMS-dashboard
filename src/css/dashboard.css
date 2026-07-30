@@ -77,11 +77,32 @@ flex-direction: column;
   height: 300px !important;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (max-width:1024px) {
+  .content{
+    margin-left: 0;
+    width: 100%;
+    padding: 15px 20px;
+  }
+
   .charts-container {
     flex-direction: column;
   }
+
   .cards{
     flex-direction: column;
+    gap: 15px 20px;
+  }
+
+  .chart-box{
+    width: 100%;
+    overflow-x: auto;
+  }
+  .stat-card{
+    min-width: 45%;
+  }
+
+  .footer{
+    padding: 20px;
+
   }
 }

@@ -1,7 +1,7 @@
 /* Sidebar */
 .sidebar {
   width: 340px;
-  height: clac(100vh - 80px);
+  height: calc(100vh - 80px);
   background: #fff;
   color: #222;
   position: fixed;
@@ -22,6 +22,7 @@
     cursor:pointer;
     transition:.3s;
     font-size:17px;
+
     font-weight:700;
 }
 
@@ -80,12 +81,25 @@
 @media (max-width:768px){
 
   .sidebar{
-    position:fixed;
-    left:-280px;
-    z-index:1000;
+    width:280px;
+    left: -280px;
+    top: 70px;
+    transition: all 0.3s ease;
+    z-index: 1000;
   }
 
   .sidebar.active{
     left:0;
   }
+
+  .menu-item{
+    padding: 15px 20px;
+    font-size: 15px;
+
+  }
+  .submenu-item{
+    padding:12px 40px;
+    font-size: 14px;
+  }
+  
 }

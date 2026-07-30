@@ -83,11 +83,31 @@ body{
 
 @media (max-width:768px){
 
+    .register-container{
+        padding: 20px;
+        height: auto;
+        min-height: 100vh;
+    }
+
   .register-card{
-    width:95%;
+    width:100%;
+    max-width: 450px;
+    padding: 20px;
   }
 
-  .register-form{
-    grid-template-columns:1fr;
+  .register-card h1{
+    font-size: 24px;
+  }
+
+  .register-card h2{
+    font-size: 18px;
+  }
+
+  .register-card input{
+    font-size: 14px;
+  }
+
+  .register-card button{
+    font-size: 15px;
   }
 }
