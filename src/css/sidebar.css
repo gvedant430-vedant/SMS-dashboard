@@ -11,7 +11,12 @@
   overflow-y: auto;
   border-right: 1px solid #e5e5e5;
 }
-
+.sidebar-close{
+    left: -340px;
+}
+.sidebar-open{
+    left: 0;
+}
 .menu-item{
     display:flex;
     align-items:center;
@@ -82,13 +87,15 @@
 
   .sidebar{
     width:280px;
-    left: -280px;
+  
     top: 70px;
     transition: all 0.3s ease;
     z-index: 1000;
   }
-
-  .sidebar.sidebar-open{
+.sidebar-close{
+    left: -280px;
+}
+  .sidebar-open{
     left:0;
   }
 

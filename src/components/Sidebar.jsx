@@ -22,7 +22,7 @@ function Sidebar({isOpen}) {
     const[phonebookOpen,setPhonebookopenOpen]=useState(false);
 
   return (
-    <div className={`sidebar ${isOpen ? "sidebar-open":""}`}>
+    <div className={ `sidebar ${isOpen ? "sidebar-open" : "sidebar-close"}`}>
 
       <NavLink to="/dashboard" 
       className="menu-item"

@@ -5,20 +5,21 @@ import Sidebar from "./Sidebar";
 import"../App.css";
 
 function Layout(){
-    const[sidebarOpen,setSidebarOpen]=useState(false);
+    const[sidebarOpen,setSidebarOpen]=useState(true);
 
-    const  toggleSidebar=()=>{
-        setSidebarOpen(!sidebarOpen);
+    const  toggleSidebar= () => {
+        setSidebarOpen(prev=>!prev);
     };
 
     return(
         <>
     
         <Navbar toggleSidebar={toggleSidebar}/>
+        
         <div className="main-layout">
-            <Sidebar isOpen={sidebarOpen}/>
+          <Sidebar isOpen={sidebarOpen}/>  
 
-            <div className="content">
+            <div className={`content ${sidebarOpen ? "content-open" : "content-close"}`}>
                 <Outlet/>
             </div>
         </div>
