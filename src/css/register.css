@@ -80,3 +80,14 @@ body{
 .register-card a:hover {
   text-decoration: underline;
 }
+
+@media (max-width:768px){
+
+  .register-card{
+    width:95%;
+  }
+
+  .register-form{
+    grid-template-columns:1fr;
+  }
+}

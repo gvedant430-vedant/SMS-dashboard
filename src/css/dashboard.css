@@ -13,8 +13,6 @@
 
 }
 
-
-
 .stat-card{
   flex: 1;
   min-width: 280px;
@@ -81,6 +79,9 @@ flex-direction: column;
 
 @media (max-width: 768px) {
   .charts-container {
+    flex-direction: column;
+  }
+  .cards{
     flex-direction: column;
   }
 }

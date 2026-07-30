@@ -59,3 +59,15 @@
 .logout-btn:hover{
     background:#e63946;
 }
+
+@media (max-width:768px){
+
+  .nav-right{
+    gap:10px;
+    flex-wrap:wrap;
+  }
+
+  .login-info{
+    display:none;
+  }
+}

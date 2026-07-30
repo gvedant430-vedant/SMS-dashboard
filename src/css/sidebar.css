@@ -76,3 +76,16 @@
     margin-left: auto;
 }
 
+
+@media (max-width:768px){
+
+  .sidebar{
+    position:fixed;
+    left:-280px;
+    z-index:1000;
+  }
+
+  .sidebar.active{
+    left:0;
+  }
+}
