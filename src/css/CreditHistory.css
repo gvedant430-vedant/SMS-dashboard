@@ -1,161 +1,138 @@
-.credit-history {
-  padding: 30px 40px;
-  background: #f5f5f5;
-  min-height: 100vh;
+.credit-history{
+  flex: 1;
+    padding:30px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.credit-heading {
-  text-align: center;
-  font-size: 34px;
-  font-weight: 700;
-  margin-bottom: 30px;
+.credit-heading{
+    text-align:center;
+    font-size:48px;
+    font-weight:700;
+    margin-bottom:30px;
 }
 
-.credit-card {
-  background: #fff;
-  padding: 35px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-.date-section {
-  display: flex;
-  gap: 3px;
-  flex-wrap: wrap;
-}
-
-.field {
-  display: flex;
-  flex-direction: column;
-}
-
-.field label {
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.field input {
-  width: 360px;
-  height: 58px;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  padding: 0 15px;
-  font-size: 18px;
-}
-
-.submit-btn {
-  height: 52px;
-  padding: 0 30px;
-  border: none;
-  border-radius: 4px;
-  background: #4caf82;
-  color: white;
-  font-size: 18px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.export-btn {
-  height: 52px;
-  padding: 0 25px;
-  border: none;
-  border-radius: 4px;
-  background: #2e2a2a;
-  color: #ffc107;
-  font-size: 18px;
-  font-weight: 600;
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.search-area {
-  display: flex;
-  justify-content: flex-end;
-  margin: 30px 0;
-}
-
-.search-area input {
-  width: 400px;
-  height: 58px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 0 15px;
-  font-size: 18px;
-  background: white;
-}
-
-.table-card {
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-table {
+.credit-card{
   width: 100%;
-  border-collapse: collapse;
+    background:#fff;
+    padding:40px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
 
-table th {
-  background: #f8f8f8;
-  border: 1px solid #ddd;
-  padding: 18px;
-  text-align: left;
-  font-size: 16px;
-  font-weight: 700;
+.credit-date-section{
+    display:flex;
+    align-items:flex-end;
+    justify-content: flex-start;
+    gap:30px;
+    flex-wrap:nowrap;
 }
 
-table td {
-  border: 1px solid #ddd;
-  padding: 20px;
-  text-align: center;
+.credit-field{
+    display:flex;
+    flex-direction:column;
 }
 
-.no-data {
-  height: 60px;
-  font-size: 18px;
+.field label{
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:10px;
 }
 
-.entries {
-  margin-top: 20px;
-  font-size: 18px;
-  font-weight: 500;
-}
-.react-datepicker-wrapper {
-  width: 100%;
+.date-picker-wrapper{
+    position:relative;
 }
 
-.react-datepicker__input-container input {
-  width: 300px;
-  height: 55px;
-  border: 1px solid #ddd;
-  padding: 10px;
-  font-size: 18px;
-}
-.date-picker-wrapper {
-  position: relative;
-  width: 300px;
-}
-
-.date-input {
-  width: 100%;
-  height: 55px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 0 45px 0 15px;
-  font-size: 16px;
+.date-input{
+    width:250px;
+    height:58px;
+    padding:0 45px 0 15px;
+    border:1px solid #ddd;
+    border-radius:4px;
+    font-size:18px;
 }
 
 .calendar-icon{
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #666;
-  font-size: 18px;
-  /* pointer-events: none; */
-  cursor: pointer;
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#444;
+    pointer-events:none;
+}
+
+.submit-btn{
+    height:58px;
+    padding:0 35px;
+    background:#4caf78;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.export-btn{
+    height:58px;
+    padding:0 30px;
+    background:#2e2929;
+    color:#ffc107;
+    border:none;
+    border-radius:5px;
+    font-size:18px;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    cursor:pointer;
+}
+
+.search-area{
+    display:flex;
+    justify-content:flex-end;
+    margin:25px 0;
+}
+
+.search-area input{
+    width:400px;
+    height:55px;
+    padding:0 20px;
+    border:1px solid #ddd;
+    border-radius:5px;
+    font-size:18px;
+}
+
+.table-card{
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    padding:20px;
+    text-align:center;
+    background:#f7f7f7;
+    border:1px solid #e5e5e5;
+    font-size:18px;
+}
+
+td{
+    padding:25px;
+    text-align:center;
+}
+
+.no-data{
+    font-size:18px;
+}
+
+.entries{
+    margin-top:20px;
+    font-size:18px;
 }

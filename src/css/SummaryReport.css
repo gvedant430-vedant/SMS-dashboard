@@ -21,12 +21,12 @@
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.date-section {
+.summaryreport-date-section {
   display: flex;
   flex-direction: column;
 }
 
-.date-section label {
+.summaryreport-date-section label {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 12px;

@@ -12,8 +12,8 @@ function CreditHistory() {
     <div className="credit-history">
       <h1 className="credit-heading">Credit History</h1>
       <div className="credit-card">
-        <div className="date-section">
-            <div className="field">
+        <div className="credit-date-section">
+            <div className="credit-field">
   <label>From Date:</label>
 
   <div className="date-picker-wrapper">

@@ -14,7 +14,7 @@ function SummaryReport() {
 
       <div className="summary-box">
         {/*From Date*/}
-        <div className="date-section">
+        <div className="summaryreport-date-section">
           <label>From Date:</label>
 
           <div className="date-wrapper">
@@ -28,7 +28,7 @@ function SummaryReport() {
         </div>
 
         {/*To Date*/}
-        <div className="date-section">
+        <div className="summaryreport-date-section">
           <label>To Date:</label>
 
           <div className="date-wrapper">

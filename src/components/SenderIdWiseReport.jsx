@@ -16,7 +16,7 @@ function SenderIdWiseReport() {
 
       {/* Filter Section */}
       <div className="report-card">
-        <div className="date-section">
+        <div className="senderidwisereport-date-section">
           <label>From Date:</label>
 
           <div className="datepicker-wrapper">
@@ -29,7 +29,7 @@ function SenderIdWiseReport() {
           </div>
         </div>
 
-        <div className="date-section">
+        <div className="senderidwisereport-date-section">
           <label>To Date:</label>
 
           <div className="datepicker-wrapper">
