@@ -302,6 +302,17 @@
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+  .tabs{
+    flex-direction: column;
+  }
+  .tabs button{
+    width: 100%;
+  }
+  .page-title{
+    font-size: 22px;
+    text-align: center;
+  }
+
   .form-row {
     flex-direction: column;
     gap: 10px;
@@ -314,9 +325,13 @@
 
   .btn-group {
     margin-left: 0;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+    justify-content: column;
+    width: 100%;
+    }
+    .add-btn,
+    .cancel-btn{
+      width: 100%;
+    }
 
   .form-row textarea,
   .form-row input[type="file"] {
@@ -488,8 +503,12 @@ table input[type="checkbox"] {
   }
 
   .top-actions {
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+  }
+  .delete-btn,
+  .download-btn{
+    width: 100%;
   }
 
   table {
@@ -497,4 +516,8 @@ table input[type="checkbox"] {
     overflow-x: auto;
     white-space: nowrap;
   }
+  .table-wrapper{
+    overflow-x: auto;
+  }
+  
 }

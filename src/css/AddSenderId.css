@@ -148,18 +148,35 @@
   background: #379d70;
 }
 
-/* =========================
+/* 
    Responsive
-========================= */
+*/
 
-@media (max-width: 768px) {
+@media (max-width: 768px),(max-width:480px) {
+
+  .page-title{
+    font-size: 28px 24px;
+  }
+  .sender-card{
+    padding: 15px;
+  }
+.form-group>label{
+  font-size: 15px;
+}
+.form-group input,
+  .form-group select{
+    font-size: 14px;
+    height: 44px;
+  }
   .form-group {
     grid-template-columns: 1fr;
     gap: 10px;
   }
 
   .radio-group {
-    gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
   }
 
   .tabs {

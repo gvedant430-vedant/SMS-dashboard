@@ -144,7 +144,7 @@ function BlacklistContacts() {
               Delete Selected
             </button>
           </div>
-
+<div className="table-wrapper">
           <table>
             <thead>
               <tr>
@@ -168,6 +168,7 @@ function BlacklistContacts() {
               </tr>
             </tbody>
           </table>
+        </div>
         </div>
       )}
     </div>

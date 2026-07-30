@@ -127,3 +127,77 @@
     margin-left:300px;
     font-weight:500;
 }
+
+@media (max-width:768px){
+
+    .templateCard{
+        padding: 15px;
+    }
+    
+    .template-management{
+        padding: 15px;
+    }
+
+    .pageTitle{
+        font-size: 28px;
+    }
+
+    .tabs{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tabs button{
+        width: 100%;
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .formGroup{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .formGroup label{
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .formGroup input,
+    .formGroup  textarea,
+    .formGroup select{
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .radioGroup{
+        flex-direction: column;
+        gap: 10px;
+        font-size: 16px;
+    }
+
+    .buttonGroup{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .previewBtn,
+    .cancelBtn{
+        width: 100%;
+    }
+
+    .error{
+        margin-left: 0;
+        font-size: 12px;
+    }
+
+    .variableBtn{
+        justify-content: center;
+    }
+
+    .variableBtn button{
+        width: 100%;
+    }
+}
+
