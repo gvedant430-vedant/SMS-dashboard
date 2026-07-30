@@ -6,25 +6,25 @@ function BlacklistContacts() {
 
   return (
     <div className="blacklist-container">
-      <h1 className="page-title">Blacklist Contacts</h1>
+      <h1 className="blacklist-title">Blacklist Contacts</h1>
 
-      <div className="tabs">
+      <div className="blacklist-tabs">
         <button
-          className={activeTab === "add" ? "active" : ""}
+          className={`blacklist-tab ${activeTab === "add" ? "blacklist-tab-active" : ""}`}
           onClick={() => setActiveTab("add")}
         >
           Add
         </button>
 
         <button
-          className={activeTab === "upload" ? "active" : ""}
+          className={`blacklist-tab ${activeTab === "upload" ? "blacklist-tab-active" : ""}`}
           onClick={() => setActiveTab("upload")}
         >
           Upload
         </button>
 
         <button
-          className={activeTab === "view" ? "active" : ""}
+          className={`blacklist-tab ${activeTab === "view" ? "blacklist-tab-active" : ""}`}
           onClick={() => setActiveTab("view")}
         >
           View/Delete
@@ -33,13 +33,13 @@ function BlacklistContacts() {
 
       {/* ADD TAB */}
       {activeTab === "add" && (
-        <div className="card">
+        <div className="blacklist-card">
           <h2>Add Blacklist Number</h2>
 
-          <div className="form-row">
+          <div className="blacklist-form-row">
             <label>Mobile Number</label>
 
-            <div className="mobile-input">
+            <div className="blacklist-mobile-input">
               <span>+91</span>
               <input
                 type="text"
@@ -48,7 +48,7 @@ function BlacklistContacts() {
             </div>
           </div>
 
-          <div className="form-row">
+          <div className="blacklist-form-row">
             <label>Description</label>
 
             <textarea
@@ -57,25 +57,25 @@ function BlacklistContacts() {
             ></textarea>
           </div>
 
-          <div className="btn-group">
-            <button className="add-btn">Add</button>
-            <button className="cancel-btn">Cancel</button>
+          <div className="blacklist-btn-group">
+            <button className="blacklist-add-btn">Add</button>
+            <button className="blacklist-cancel-btn">Cancel</button>
           </div>
         </div>
       )}
 
       {/* UPLOAD TAB */}
       {activeTab === "upload" && (
-        <div className="card">
+        <div className="blacklist-card">
           <h2>Upload Blacklist Number</h2>
 
-          <div className="form-row">
+          <div className="blacklist-form-row">
             <label>Choose File</label>
 
             <div>
               <input type="file" />
 
-              <p className="note">
+              <p className="blacklist-note">
                 NOTE: only .txt files are allowed. It'll only
                 accept a file having numbers max. 50,000
               </p>
@@ -84,7 +84,7 @@ function BlacklistContacts() {
             </div>
           </div>
 
-          <div className="form-row">
+          <div className="blacklist-form-row">
             <label>Description</label>
 
             <textarea
@@ -93,21 +93,21 @@ function BlacklistContacts() {
             ></textarea>
           </div>
 
-          <div className="btn-group">
-            <button className="add-btn">Upload</button>
-            <button className="cancel-btn">Cancel</button>
+          <div className="blacklist-btn-group">
+            <button className="blacklist-add-btn">Upload</button>
+            <button className="blacklist-cancel-btn">Cancel</button>
           </div>
         </div>
       )}
 
       {/* VIEW DELETE TAB */}
       {activeTab === "view" && (
-        <div className="card">
-          <div className="search-section">
-            <div className="search-box">
+        <div className="blacklist-card">
+          <div className="blacklist-search-section">
+            <div className="blacklist-search-box">
               <label>Search Mobile Number</label>
 
-              <div className="mobile-input">
+              <div className="blacklist-mobile-input">
                 <span>+91</span>
                 <input
                   type="text"
@@ -115,12 +115,12 @@ function BlacklistContacts() {
                 />
               </div>
 
-              <button className="search-btn">
+              <button className="blacklist-search-btn">
                 Search
               </button>
             </div>
 
-            <div className="search-box">
+            <div className="blacklist-search-box">
               <label>Description</label>
 
               <select>
@@ -129,23 +129,23 @@ function BlacklistContacts() {
                 </option>
               </select>
 
-              <button className="search-btn">
+              <button className="blacklist-search-btn">
                 Search
               </button>
             </div>
           </div>
 
-          <div className="top-actions">
-            <button className="download-btn">
+          <div className="blacklist-top-actions">
+            <button className="blacklist-download-btn">
               Download
             </button>
 
-            <button className="delete-btn">
+            <button className="blacklist-delete-btn">
               Delete Selected
             </button>
           </div>
-<div className="table-wrapper">
-          <table>
+<div className="blacklist-table-wrapper">
+          <table className="blacklist-table">
             <thead>
               <tr>
                 <th>
