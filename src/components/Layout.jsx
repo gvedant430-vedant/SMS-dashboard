@@ -16,10 +16,10 @@ function Layout(){
     
         <Navbar toggleSidebar={toggleSidebar}/>
         
-        <div className="main-layout">
+        <div className="layout-container">
           <Sidebar isOpen={sidebarOpen}/>  
 
-            <div className={`content ${sidebarOpen ? "content-open" : "content-close"}`}>
+            <div className={`content ${sidebarOpen ? "layout-contentOpen" : "layout-contentClose"}`}>
                 <Outlet/>
             </div>
         </div>

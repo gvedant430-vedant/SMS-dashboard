@@ -28,17 +28,35 @@ function DynamicCampaign(){
 
        const handleSubmit=(e)=>{
         e.preventDefault();
-        console.log(FormData);
+        console.log(formData);
        };
 
+       const handleReset = () => {
+  setFormData({
+    campaignName: "user4-campaign-1707206-1500",
+    messageEncoding: "SMS",
+    file: null,
+    messageType: "Transactional",
+    senderId: "",
+    templateName: "",
+    mobileNumber: "",
+    columnList: "",
+    messageText: "",
+    shortUrl: "",
+    entityId: "",
+    operatorTemplateId: "",
+    scheduleMessage: "No",
+  });
+};
+
     return(
-  <div className="dynamic-container">
+  <div className="dynamiccampaign-container">
     <h1>Dynamic Campaign</h1>
 
-    <form onSubmit={handleSubmit} className="dynamic-form">
+    <form onSubmit={handleSubmit} className="dynamiccampaign-form">
 
         {/*Campaign Name*/}
-        <div className="form-group">
+        <div className="dynamiccampaign-formGroup">
             <label>Campaign Name</label>
             <div>
                 <input
@@ -46,15 +64,15 @@ function DynamicCampaign(){
                 name="campaignName"
                 value={formData.campaignName}
                 onChange={handleChange}/>
-                <p className="note">
-                    NOTE:Special charaters are not allowed in campaign name.
+                <p className="dyanamiccampaign-note">
+                    NOTE:Special characters are not allowed in campaign name.
                 </p>
             </div>
         </div>
         {/*Message Encoding*/}
-        <div className="form-group">
+        <div className="dyanamiccampaign-formGroup">
             <label>Message Encoding</label>
-            <div className="radio-group">
+            <div className="dynamiccampaign-radioGroup">
                 <label>
                     <input
                     type="radio"
@@ -76,7 +94,7 @@ function DynamicCampaign(){
             </div>
         </div>
         {/*File Upload*/}
-        <div className="form-group">
+        <div className="dynamiccampaign-formGroup">
             <label>File Upload</label>
             <div>
                 <input
@@ -84,7 +102,7 @@ function DynamicCampaign(){
                 name="file"
                 accept=".csv,.xlsx,.zip"
                 onChange={handleChange}/>
-                <p className="note">
+                <p className="dynamiccampaign-note">
                     NOTE:Only .xlsx,.csv and .zip files are allowed.
                 </p>
                 </div>
@@ -92,7 +110,7 @@ function DynamicCampaign(){
         {/*Message Type*/}
         <div className="form-group">
             <label>Message Type</label>
-            <div className="radio-group">
+            <div className="dynamiccampaign-radiogroup">
                 <label>
                     <input
                     type="radio"
@@ -123,19 +141,19 @@ function DynamicCampaign(){
             </div>
         </div>
         {/*Sender ID*/}
-        <div className="form-group">
+        <div className="dynamiccampaign-formGroup">
             <label>Sender ID</label>
 
             <select
             name="senderId"
             value={formData.senderId}
             onChange={handleChange}>
-                <option>--Select--</option>
-                <option>abcd</option>
+                <option value="">--Select--</option>
+                <option value="ABCD">abcd</option>
             </select>
         </div>
         {/*Template*/}
-        <div className="form-group">
+        <div className="dynamiccampaign-formGroup">
             <label>Content Template Name</label>
 
             <select
@@ -146,7 +164,7 @@ function DynamicCampaign(){
             </select>
         </div>
         {/*Mobile Number*/}
-        <div className="form-group">
+        <div className="dynamiccampaign-formGroup">
             <label>Mobile Number</label>
 
             <select
@@ -157,7 +175,7 @@ function DynamicCampaign(){
             </select>
         </div>
         {/*Column List*/}
-        <div className="form-group">
+        <div className="dynamiccampaign-formGroup">
             <label>Column List</label>
             <select
             name="columnList"
@@ -167,13 +185,13 @@ function DynamicCampaign(){
             </select>
         </div>
         {/*Button*/}
-        <div className="btn-wrapper">
-            <button type="button" className="add-btn">
+        <div className="dynamiccampaign-btnWrapper">
+            <button type="button" className="dynamaiccampaign-addBtn">
                 Add to Text
             </button>
         </div>
         {/*Message Text*/}
-        <div className="form-group">
+        <div className="dynamiccampaign-formGroup">
             <label>Message Text</label>
             <div>
                 <textarea
@@ -181,16 +199,16 @@ function DynamicCampaign(){
                 placeholder="Original Message Text"
                 value={formData.messageText}
                 onChange={handleChange}/>
-                <p className="note">
+                <p className="dynamiccampaign-note">
                 NOTE: xxxxxx will be replaced by actual shortcode.
                 </p>
             </div>
         </div>
         {/*Short URL*/}
-        <div className="form-group">
+        <div className="dynamiccampaign-formGroup">
             <label>Convert short URL</label>
 
-            <div className="radio-group">
+            <div className="dynamiccampaign-radioGroup">
                 <label>
                     <input
                     type="radio"
@@ -212,7 +230,7 @@ function DynamicCampaign(){
             </div>
         </div>
         {/*Entity ID*/}
-        <div className="form-group">
+        <div className="dyformnamiccampaign-Group">
             <label>Entity ID</label>
             <input 
             type="text"
@@ -222,7 +240,7 @@ function DynamicCampaign(){
             onChange={handleChange}/>
         </div>
         {/*Template ID*/}
-        <div className="form-group">
+        <div className="dynamiccampaign-formGroup">
           <label>Operator Template ID</label>
 
           <input
@@ -234,10 +252,10 @@ function DynamicCampaign(){
           />
         </div>
         {/*Schedule*/}
-         <div className="form-group">
+         <div className="dynamiccampaign-formGroup">
           <label>Schedule Message</label>
 
-          <div className="radio-group">
+          <div className="dynamiccampaign-radioGroup">
             <label>
               <input
                 type="radio"
@@ -262,12 +280,13 @@ function DynamicCampaign(){
           </div>
         </div>
          {/* Buttons */}
-        <div className="action-buttons">
-          <button type="submit" className="preview-btn">
+        <div className="dynamiccampaign-actionButtons">
+          <button type="submit" className="dynamiccampaign-previewBtn">
             Preview
           </button>
 
-          <button type="reset" className="cancel-btn">
+          <button type="reset" className="dynamiccampaign-cancelbtn"
+            onClick={handleReset}> 
             Cancel
           </button>
         </div>

@@ -12,27 +12,27 @@ function Navbar({toggleSidebar}){
     };
 
     return(
-        <nav className="navbar">
-            <div className="nav-left">
-                <FaBars className="menu-icon" 
+        <nav className="navbar-container">
+            <div className="navbar-left">
+                <FaBars className="navabar-menuIcon" 
                 onClick={toggleSidebar}/>
             </div>
             {/*Login*/}
-            <div className="nav-right">
-                <div className="login-info">
+            <div className="navbar-right">
+                <div className="navbar-loginInfo">
                     <b>Last Login:</b>
-                    <span className="ip">IP:
+                    <span className="navbar-ip">IP:
                     </span>
                 </div>
 
                 {/*User*/}
-                <div className="user">
+                <div className="navbar-user">
           <FaUserCircle />
           <span>user4</span>
         </div>
 
         {/*Logout*/}
-        <button className="logout-btn" onClick={handleLogout}>
+        <button className="navbar-logoutBtn" onClick={handleLogout}>
           <FaSignOutAlt />
          <span>Logout</span>
         </button>

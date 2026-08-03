@@ -5,24 +5,24 @@ function IndividualContacts() {
   const [activeTab, setActiveTab] = useState("add");
 
   return (
-    <div className="individual-contacts">
-      <h1 className="title">Individual Contacts</h1>
+    <div className="individualcontacts-container">
+      <h1 className="individualcontacts-title">Individual Contacts</h1>
 
-      <div className="tabs">
+      <div className="individualcontacts-tabs">
         <button
-          className={activeTab === "add" ? "active" : ""}
+          className={activeTab === "add" ? "individualcontacts-active" : ""}
           onClick={() => setActiveTab("add")}>
           Add Contacts
         </button>
 
         <button
-          className={activeTab === "upload" ? "active" : ""}
+          className={activeTab === "upload" ? "individualcontacts-active" : ""}
           onClick={() => setActiveTab("upload")}>
           Upload Contacts
         </button>
 
         <button
-          className={activeTab === "search" ? "active" : ""}
+          className={activeTab === "search" ? "individualcontacts-active" : ""}
           onClick={() => setActiveTab("search")}>
           Search Contacts
         </button>
@@ -30,23 +30,23 @@ function IndividualContacts() {
 
       {/* ADD CONTACTS */}
       {activeTab === "add" && (
-        <div className="card">
-          <div className="row">
-            <div className="field">
+        <div className="individualcontacts-card">
+          <div className="individualcontacts-row">
+            <div className="individualcontacts-field">
               <label>Group Name</label>
               <select>
                 <option>Select a Group</option>
               </select>
             </div>
 
-            <div className="field">
+            <div className="individualcontacts-field">
               <label>Name</label>
               <input type="text" placeholder="Name" />
             </div>
 
-            <div className="field">
+            <div className="individualcontacts-field">
               <label>Mobile Number</label>
-              <div className="mobile-box">
+              <div className="individualcontacts-mobileBox">
                 <span>+91</span>
                 <input
                   type="text"
@@ -55,7 +55,7 @@ function IndividualContacts() {
               </div>
             </div>
 
-            <button className="green-btn">
+            <button className="individualcontacts-greenBtn">
               Add Contact
             </button>
           </div>
@@ -64,16 +64,16 @@ function IndividualContacts() {
 
       {/* UPLOAD CONTACTS */}
       {activeTab === "upload" && (
-        <div className="card">
-          <div className="row">
-            <div className="field">
+        <div className="individualcontacts-card">
+          <div className="individualcontacts-row">
+            <div className="individualcontacts-field">
               <label>Group Name</label>
               <select>
                 <option>Select a Group</option>
               </select>
             </div>
 
-            <div className="field">
+            <div className="individualcontacts-field">
               <label>Choose File</label>
               <input type="file" />
               <small>
@@ -81,7 +81,7 @@ function IndividualContacts() {
               </small>
             </div>
 
-            <button className="green-btn">
+            <button className="individualcontacts-greenbtn">
               Upload Contact
             </button>
           </div>
@@ -91,19 +91,19 @@ function IndividualContacts() {
       {/* SEARCH CONTACTS */}
       {activeTab === "search" && (
         <>
-          <div className="card">
-            <div className="row">
-              <div className="field">
+          <div className="individualcontacts-card">
+            <div className="individualcontacts-row">
+              <div className="individualcontacts-field">
                 <label>Group Name</label>
                 <select>
                   <option>Select a Group</option>
                 </select>
               </div>
 
-              <div className="field">
+              <div className="individualcontacts-field">
                 <label>Mobile Number</label>
 
-                <div className="mobile-box">
+                <div className="individualcontacts-mobileBox">
                   <span>+91</span>
 
                   <input
@@ -113,29 +113,29 @@ function IndividualContacts() {
                 </div>
               </div>
 
-              <div className="search-btns">
-                <button className="green-btn">
+              <div className="individualcontacts-searchBtns">
+                <button className="individualcontacts-greenBtn">
                   Search
                 </button>
 
-                <button className="black-btn">
+                <button className="individualcontacts-blackBtn">
                   All Contacts
                 </button>
               </div>
             </div>
           </div>
 
-          <div className="table-actions">
-            <button className="black-btn">
+          <div className="individualcontacts-tableActions">
+            <button className="individualcontacts-blackBtn">
               Download
             </button>
 
-            <button className="delete-btn">
+            <button className="individualcontacts-deleteBtn">
               Delete Selected
             </button>
           </div>
 
-          <div className="search-box">
+          <div className="individualcontacts-searchBox">
             <input
               type="text"
               placeholder="Search Contact List"
@@ -156,14 +156,15 @@ function IndividualContacts() {
 
             <tbody>
               <tr>
-                <td colSpan="4">
+                <td colSpan="4"
+                className="individualcontacts-noData">
                   No contacts found.
                 </td>
               </tr>
             </tbody>
           </table>
 
-          <p>There are total 0 entries</p>
+          <p className="individualcontacts-entries">There are total 0 entries</p>
         </>
       )}
     </div>

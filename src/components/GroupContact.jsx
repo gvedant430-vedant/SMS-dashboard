@@ -5,19 +5,19 @@ function GroupContacts() {
   const [activeTab, setActiveTab] = useState("add");
 
   return (
-    <div className="group-contacts">
-      <h1 className="title">Group Contacts</h1>
+    <div className="groupcontacts-container">
+      <h1 className="groupcontacts-title">Group Contacts</h1>
 
-      <div className="tabs">
+      <div className="groupcontacts-tabs">
         <button
-          className={activeTab === "add" ? "active" : ""}
+          className={activeTab === "add" ? "groupcontacts-active" : ""}
           onClick={() => setActiveTab("add")}
         >
           Add Group
         </button>
 
         <button
-          className={activeTab === "list" ? "active" : ""}
+          className={activeTab === "list" ? "groupcontacts-active" : ""}
           onClick={() => setActiveTab("list")}
         >
           List Group
@@ -27,10 +27,10 @@ function GroupContacts() {
       {/* ADD GROUP */}
 
       {activeTab === "add" && (
-        <div className="card">
-          <div className="row">
+        <div className="groupcontacts-card">
+          <div className="groupcontacts-row">
 
-            <div className="field">
+            <div className="groupcontacts-field">
               <label>Group Name</label>
 
               <input
@@ -43,7 +43,7 @@ function GroupContacts() {
               </small>
             </div>
 
-            <div className="field">
+            <div className="groupcontacts-field">
               <label>Description</label>
 
               <input
@@ -52,12 +52,12 @@ function GroupContacts() {
               />
             </div>
 
-            <div className="btn-group">
-              <button className="submit-btn">
+            <div className="groupcontacts-btnGroup">
+              <button className="groupcontacts-submitBtn">
                 Submit
               </button>
 
-              <button className="cancel-btn">
+              <button className="groupcontacts-cancelBtn">
                 Cancel
               </button>
             </div>
@@ -70,14 +70,14 @@ function GroupContacts() {
 
       {activeTab === "list" && (
         <>
-          <div className="search-box">
+          <div className="groupcontacts-searchBox">
             <input
               type="text"
               placeholder="Search Group Contact"
             />
           </div>
 
-          <table className="group-table">
+          <table className="groupcontacts-groupTable">
             <thead>
               <tr>
                 <th>SR. NO.</th>
@@ -92,7 +92,7 @@ function GroupContacts() {
               <tr>
                 <td
                   colSpan="5"
-                  className="no-data"
+                  className="groupcontacts-noData"
                 >
                   No group found.
                 </td>
@@ -100,7 +100,7 @@ function GroupContacts() {
             </tbody>
           </table>
 
-          <p className="entries">
+          <p className="groupcontacts-entries">
             There are total 0 entries
           </p>
         </>
