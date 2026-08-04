@@ -9,45 +9,45 @@ function SummaryReport() {
   const [toDate, setToDate] = useState(new Date());
 
   return (
-    <div className="summary-container">
-      <h1>Summary Report</h1>
+    <div className="summaryreport-container">
+      <h1 className="summaryreport-title">Summary Report</h1>
 
-      <div className="summary-box">
+      <div className="summaryreport-box">
         {/*From Date*/}
-        <div className="summaryreport-date-section">
+        <div className="summaryreport-dateSection">
           <label>From Date:</label>
 
-          <div className="date-wrapper">
+          <div className="summaryreport-dateWrapper">
           <DatePicker
             selected={fromDate}
             onChange={(date) => setFromDate(date)}
             dateFormat="dd-MM-yyyy"
-            className="date-input"/>
-            <FaRegCalendarAlt className="calender-icon"/>
+            className="summaryreport-dateInput"/>
+            <FaRegCalendarAlt className="summaryreport-calenderIcon"/>
         </div>
         </div>
 
         {/*To Date*/}
-        <div className="summaryreport-date-section">
+        <div className="summaryreport-dateSection">
           <label>To Date:</label>
 
-          <div className="date-wrapper">
+          <div className="summaryreport-dateWrapper">
           <DatePicker
             selected={toDate}
             onChange={(date) => setToDate(date)}
             dateFormat="dd-MM-yyyy"
-            className="date-input"/>
-            <FaRegCalendarAlt className="calender-icon"/>
+            className="summartreport-dateInput"/>
+            <FaRegCalendarAlt className="summaryreport-calenderIcon"/>
         </div>
         </div>
 
-        <button className="submit-btn">Submit</button>
+        <button className="summaryreport-submitBtn">Submit</button>
 
-        <button className="download-btn">Download</button>
+        <button className="summaryreport-downloadBtn">Download</button>
       </div>
 
-      <div className="table-box">
-        <table>
+      <div className="summaryreport-tableBox">
+        <table className="summaryreort-table">
           <thead>
             <tr>
               <th>SUMMARY DATE</th>
@@ -62,13 +62,13 @@ function SummaryReport() {
 
           <tbody>
             <tr>
-              <td colSpan="7">No Data Available</td>
+              <td colSpan="7" className="summaryreport-noData">No Data Available</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <p className="entries">
+      <p className="summaryreport-entries">
         There are total <b>0</b> entries
       </p>
     </div>

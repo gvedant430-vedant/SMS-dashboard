@@ -1,10 +1,17 @@
-function ViewContentTemplate(){
-    return(
-        <div>
-            <h3>View Content template</h3>
-            <p>Template List.</p>
-        </div>
-    );
+function ViewContentTemplate() {
+  return (
+    <div className="view-content-template">
+
+      <h3 className="view-content-template-title">
+        View Content Template
+      </h3>
+
+      <p className="view-content-template-description">
+        Template List.
+      </p>
+
+    </div>
+  );
 }
 
-export  default ViewContentTemplate;
+export default ViewContentTemplate;

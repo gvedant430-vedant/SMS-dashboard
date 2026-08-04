@@ -3,19 +3,21 @@ import { useState } from "react";
 
 function SenderIdList(){
 return(
-    <div className="sender-list">
-    <div className="search-container">
-        <input type="text" placeholder="Search Sender ID"/>
+    <div className="senderidlist-container">
+    <div className="senderidlist-searchContainer">
+        <input type="text" 
+        placeholder="Search Sender ID"
+          className="senderidlist-searchInput"
+          />
     </div>
-       
-       <table>
+        <table className="senderidlist-table">
         <thead>
             <tr>
-                <th></th>
-                <th>SENDER ID</th>
-                <th>ACTIVE</th>
-                <th>DEFAULT</th>
-                <th>ENTITY ID</th>
+               <th className="senderidlist-checkboxHeader"></th>
+        <th className="senderidlist-senderIdHeader">SENDER ID</th>
+        <th className="senderidlist-activeHeader">ACTIVE</th>
+        <th className="senderidlist-defaultHeader">DEFAULT</th>
+        <th className="senderidlist-entityIdHeader">ENTITY ID</th>
             </tr>
         </thead>
        </table>

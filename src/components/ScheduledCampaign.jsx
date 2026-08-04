@@ -10,50 +10,50 @@ function ScheduledCampaign() {
   const [campaignType, setCampaignType] = useState("All");
 
   return (
-    <div className="scheduled-container">
-      <h1>Scheduled Campaign</h1>
+    <div className="scheduledcampaign-container">
+      <h1 className="scheduledcampaign-title">Scheduled Campaign</h1>
 
-      <div className="filter-box">
+      <div className="scheduledcampaign-filterBox">
 
         {/* From Date */}
-        <div className="form-group">
+        <div className="scheduledcampaign-formGroup">
           <label>From Date:</label>
 
-          <div className="date-wrapper">
+          <div className="scheduledcampaign-dateWrapper">
             <DatePicker
               selected={fromDate}
               onChange={(date) => setFromDate(date)}
               dateFormat="dd-MM-yyyy"
-              className="date-input"
+              className="scheduledcampaign-dateInput"
             />
-            <FaRegCalendarAlt className="calendar-icon" />
+            <FaRegCalendarAlt className="scheduledcampaign-calendarIcon" />
           </div>
         </div>
 
         {/* To Date */}
-        <div className="form-group">
+        <div className="scheduledcampaign-formGroup">
           <label>To Date:</label>
 
-          <div className="date-wrapper">
+          <div className="scheduledcampaign-dateWrapper">
             <DatePicker
               selected={toDate}
               onChange={(date) => setToDate(date)}
               minDate={fromDate}
               dateFormat="dd-MM-yyyy"
-              className="date-input"
+              className="scheduledcampaign-dateInput"
             />
-            <FaRegCalendarAlt className="calendar-icon" />
+            <FaRegCalendarAlt className="scheduledcampaign-calendarIcon" />
           </div>
         </div>
 
         {/* Campaign Type */}
-        <div className="form-group">
+        <div className="scheduledcampaign-formGroup">
           <label>Campaign Type:</label>
 
           <select
             value={campaignType}
             onChange={(e) => setCampaignType(e.target.value)}
-            className="select-box"
+            className="scheduledcampaign-selectBox"
           >
             <option>All</option>
             <option>Quick Campaign</option>
@@ -63,16 +63,16 @@ function ScheduledCampaign() {
           </select>
         </div>
 
-        <button className="submit-btn">Submit</button>
+        <button className="scheduledcampaign-submitBtn">Submit</button>
       </div>
 
       {/* Search */}
-      <div className="search-box">
+      <div className="scheduledcampaign-searchBox">
         <input type="text" placeholder="Search Campaign" />
       </div>
 
       {/* Table */}
-      <table className="campaign-table">
+      <table className="scheduledcampaign-table">
         <thead>
           <tr>
             <th>CAMPAIGN TYPE</th>
@@ -86,14 +86,14 @@ function ScheduledCampaign() {
 
         <tbody>
           <tr>
-            <td colSpan="6" className="no-data">
+            <td colSpan="6"  className="scheduledcampaign-noData">
               No scheduled campaigns found
             </td>
           </tr>
         </tbody>
       </table>
 
-      <p className="entries">There are total <b>0</b> entries</p>
+      <p className="scheduledcampaign-entries">There are total <b>0</b> entries</p>
     </div>
   );
 }

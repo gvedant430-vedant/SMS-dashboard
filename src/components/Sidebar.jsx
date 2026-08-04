@@ -22,10 +22,11 @@ function Sidebar({isOpen}) {
     const[phonebookOpen,setPhonebookopenOpen]=useState(false);
 
   return (
-    <div className={ `sidebar ${isOpen ? "sidebar-open" : "sidebar-close"}`}>
+    <div className={ `sidebar-container 
+    ${isOpen ? "sidebar-open" : "sidebar-close"}`}>
 
       <NavLink to="/dashboard" 
-      className="menu-item"
+      className="sidebar-menuItem"
        onClick={() => {
     setDltOpen(false);
     setSpielyOpen(false);
@@ -39,7 +40,7 @@ function Sidebar({isOpen}) {
 
      {/*DLT*/}
 
-    <div className="menu-item "
+ <div className="sidebar-menuItem"
     onClick={()=> {
       setDltOpen(!dltOpen);
       setSpielyOpen(false);
@@ -49,21 +50,21 @@ function Sidebar({isOpen}) {
       }} >
 
       <FaClipboardList/>
-        <span className="menu-text"> DLT Management</span>
-        <span className="arrow">
+       <span className="sidebar-menuText"> DLT Management</span>
+       <span className="sidebar-arrow">
           {dltOpen? <FaChevronUp/> :<FaChevronDown/>}</span>
         </div>
 
      {dltOpen&&(
-       <div className="submenu">
-     <NavLink to="/add-sender-id" className="submenu-item"><FaArrowRight/><span>Add Sender ID</span></NavLink>
-     <NavLink to="/template-management" className="submenu-item"><FaArrowRight/><span>Add Template</span></NavLink>
-     <NavLink to="/dlt-chain-registration" className="submenu-item"><FaArrowRight/><span>DLT Chain Registration</span></NavLink>
+     <div className="sidebar-submenu">
+     <NavLink to="/add-sender-id" className="sidebar-submenuItem"><FaArrowRight/><span>Add Sender ID</span></NavLink>
+     <NavLink to="/template-management" className="sidebar-submenuItem"><FaArrowRight/><span>Add Template</span></NavLink>
+     <NavLink to="/dlt-chain-registration" className="sidebar-submenuItem"><FaArrowRight/><span>DLT Chain Registration</span></NavLink>
      </div>
         )}
 
         {/*Spiely Link*/}
-        <div className="menu-item" 
+        <div className="sidebar-menuItem"
         onClick={()=>{
            setSpielyOpen(!spielyOpen);
              setDltOpen(false);
@@ -71,19 +72,19 @@ function Sidebar({isOpen}) {
               setReportOpen(false);
                 setPhonebookopenOpen(false);}}>
           <FaLink/>
-        <span className="menu-text"> Spiely Link Management</span>
-        <span className="arrow">{spielyOpen?<FaChevronUp/>:<FaChevronDown/>}</span>
+        <span className="sidebar-menuText"> Spiely Link Management</span>
+        <span className="sidebar-arrow">{spielyOpen?<FaChevronUp/>:<FaChevronDown/>}</span>
         </div>
 
         {spielyOpen &&(
-          <div className="submenu">
-            <NavLink to="/spiely-link" className="submenu-item"> <FaArrowRight/>New Spiely Link </NavLink>
-            <NavLink to ="/domain-manager" className="submenu-item"><FaArrowRight/>Domain Manager</NavLink>
+          <div className="sidebar-submenu">
+            <NavLink to="/spiely-link" className="sidebar-submenuItem"> <FaArrowRight/>New Spiely Link </NavLink>
+            <NavLink to ="/domain-manager" className="sidebar-submenuItem"><FaArrowRight/>Domain Manager</NavLink>
             </div>
         )}
 
         {/*Campaign Management*/}
-        <div className="menu-item" 
+        <div className="sidebar-menuItem" 
         onClick={()=>{
        
         setCampaignOpen(!campaignOpen);
@@ -92,22 +93,22 @@ function Sidebar({isOpen}) {
           setReportOpen(false);
           setPhonebookopenOpen(false); }}>
           <FaBullhorn/>
-            <span className="menu-text"> Campaign Management</span>
-            <span className="arrow">{campaignOpen?<FaChevronUp/>:<FaChevronDown/>}</span>
+            <span className="sidebarmenuText"> Campaign Management</span>
+            <span className="sidebar-arrow">{campaignOpen?<FaChevronUp/>:<FaChevronDown/>}</span>
         </div>
 
         {campaignOpen &&(
-            <div className="submenu">
-                <NavLink to="/quick-campaign" className="submenu-item"><FaArrowRight/>Quick Campaign</NavLink>
-                <NavLink to="/upload-campaign" className="submenu-item"><FaArrowRight/>Upload Campaign</NavLink>
-                <NavLink to="/dynamaic-campaign" className="submenu-item"><FaArrowRight/>Dynamic Campaign</NavLink>
-                <NavLink to="/group-campaign" className="submenu-item"><FaArrowRight/>Group Campaign</NavLink>
-                <NavLink to="/scheduled-campaign" className="submenu-item"><FaArrowRight/>Scheduled Campaign</NavLink>
+            <div className="sidebar-submenu">
+                <NavLink to="/quick-campaign" className="sidebar-submenuItem"><FaArrowRight/>Quick Campaign</NavLink>
+                <NavLink to="/upload-campaign" className="sidebar-submenuItem"><FaArrowRight/>Upload Campaign</NavLink>
+                <NavLink to="/dynamaic-campaign" className="sideabrsubmenuItem"><FaArrowRight/>Dynamic Campaign</NavLink>
+                <NavLink to="/group-campaign" className="sidebar-submenuItem"><FaArrowRight/>Group Campaign</NavLink>
+                <NavLink to="/scheduled-campaign" className="sidebar-submenuItem"><FaArrowRight/>Scheduled Campaign</NavLink>
                 </div>
         )}
 
         {/*Report Management*/}
-        <div className="menu-item" 
+        <div className="sidebar-menuItem" 
         onClick={()=>{
         setReportOpen(!reportOpen)
         setDltOpen(false);
@@ -115,25 +116,25 @@ function Sidebar({isOpen}) {
         setCampaignOpen(false);
         setPhonebookopenOpen(false);}}>
           <FaFileAlt/>
-            <span className="menu-text"> Report Management</span>
-            <span className="arrow">{reportOpen?<FaChevronUp/>:<FaChevronDown/>}</span>
+            <span className="sidebar-menuText"> Report Management</span>
+            <span className="sudebar-arrow">{reportOpen?<FaChevronUp/>:<FaChevronDown/>}</span>
             </div> 
 
             {reportOpen&&(
-                <div className="submenu">
-                    <NavLink to="/sumary-report" className="submenu-item"><FaArrowRight/>Summary Report</NavLink>
-                    <NavLink to="/sender-id-wise-report" className="submenu-item"><FaArrowRight/>Sender ID Wise Report</NavLink>
-                    <NavLink to="/template-id-wise-report" className="submenu-item"><FaArrowRight/>Template Id Wise Report</NavLink>
-                    <NavLink to="/detailed-report" className="submenu-item"><FaArrowRight/>Detailed Report</NavLink>
-                    <NavLink to="/campaign-report" className="submenu-item"><FaArrowRight/>Campaign Report</NavLink>
-                    <NavLink to="/clicker-report" className="submenu-item"><FaArrowRight/>Clicker Report</NavLink>
-                    <NavLink to="/download-report" className="submenu-item"><FaArrowRight/>Download Report</NavLink>
-                    <NavLink to="/vwn-report" className="submenu-item"><FaArrowRight/>VMN Report</NavLink>
+                <div className="sidebar-submenu">
+                    <NavLink to="/sumary-report" className="sidebar-submenuItem"><FaArrowRight/>Summary Report</NavLink>
+                    <NavLink to="/sender-id-wise-report" className="sidebar-submenuItem"><FaArrowRight/>Sender ID Wise Report</NavLink>
+                    <NavLink to="/template-id-wise-report" className="sidebar-submenuItem"><FaArrowRight/>Template Id Wise Report</NavLink>
+                    <NavLink to="/detailed-report" className="sidebar-submenuItem"><FaArrowRight/>Detailed Report</NavLink>
+                    <NavLink to="/campaign-report" className="sidebar-submenuItem"><FaArrowRight/>Campaign Report</NavLink>
+                    <NavLink to="/clicker-report" className="sidebar-submenuItem"><FaArrowRight/>Clicker Report</NavLink>
+                    <NavLink to="/download-report" className="sidebar-submenuItem"><FaArrowRight/>Download Report</NavLink>
+                    <NavLink to="/vwn-report" className="sidebar-submenuItem"><FaArrowRight/>VMN Report</NavLink>
                     </div>
             )}
 
 {/*Phonebook*/}
-<div className="menu-item" 
+<div className="sidebar-menuItem" 
 onClick={()=>{
   setPhonebookopenOpen(!phonebookOpen);
   setDltOpen(false);
@@ -142,21 +143,21 @@ onClick={()=>{
   setSpielyOpen(false);
 }}>
   <FaPhoneAlt/>
-    <span className="menu-text">PhoneBook Management</span>
-    <span className="arrow">{phonebookOpen?<FaChevronUp/>:<FaChevronDown/>}</span>
+    <span className="sidebar-menuText">PhoneBook Management</span>
+    <span className="sidebar-arrow">{phonebookOpen?<FaChevronUp/>:<FaChevronDown/>}</span>
 </div>
       
       {phonebookOpen&&(
-        <div className="submenu">
-            <NavLink to="/indiviual-contact" className="submenu-item"><FaArrowRight/>Individual Contacts</NavLink>
-            <NavLink to="/group-contact" className="submenu-item"><FaArrowRight/>Group Contacts</NavLink>
+        <div className="sidebar-submenu">
+            <NavLink to="/indiviual-contact" className="sidebar-submenuItem"><FaArrowRight/>Individual Contacts</NavLink>
+            <NavLink to="/group-contact" className="sidebar-submenuItem"><FaArrowRight/>Group Contacts</NavLink>
             </div>
       )}
 
 {/*BlackList Contacts*/}
 
       <NavLink to="/blacklist-contacts" 
-      className="menu-item"
+      className="sidebar-menuItem"
       onClick={()=>{
             setDltOpen(false);
     setSpielyOpen(false);
@@ -170,7 +171,7 @@ onClick={()=>{
 
 {/*Credit History*/}
       <NavLink to="/credit-history" 
-      className="menu-item"
+      className="sidebar-menuItem"
        onClick={() => {
     setDltOpen(false);
     setSpielyOpen(false);

@@ -25,10 +25,10 @@ function QuickCampaign(){
     };
 
     return(
-        <div className="quick-container">
-            <h1>Quick Campaign</h1>
-            <div className="quick-card">
-                <div className="row">
+        <div className="quickcampaign-container">
+            <h1 className="quickcampaign-title">Quick Campaign</h1>
+            <div className="quickcampaign-card">
+                <div className="quickcampaign-row">
                     <label>Campaign Name</label>
                     <div>
                         <input
@@ -36,12 +36,12 @@ function QuickCampaign(){
                         name="campaignName"
                         value={formData.campaignName}
                         onChange={handleChange}/>
-                        <p className="note">
+                        <p className="quickcampaign-note">
                             NOTE:Special characters are not allowed.
                         </p>
                     </div>
                 </div>
-                <div className="row">
+                <div className="quickcampaignrow">
                     <label>Mobile Number(s)</label>
 
                     <div>
@@ -54,10 +54,10 @@ function QuickCampaign(){
                     </div>
                 </div>
 
-                <div className="row">
+                <div className="quickcampaign-row">
                     <label>Message Type</label>
 
-                    <div className="radio">
+                    <div className="quickcampaign-radio">
                         <input type="radio" checked/>
                         Transactional
 
@@ -69,23 +69,23 @@ function QuickCampaign(){
                     </div>
                 </div>
 
-                <div className="row">
+                <div className="quickcampaign-row">
                     <label>Sender ID</label>
                     <select>
                         <option>--Select--</option>
                     </select>
                 </div>
 
-                <div className="row">
+                <div className="quickcampaign-row">
                     <label>Content Template Name</label>
                     <select>
                         <option>--Select--</option>
                     </select>
                 </div>
-                <div className="row">
+                <div className="quickcampaign-row">
                     <label>Message Encoding</label>
 
-                    <div className="radio">
+                    <div className="quickcampaign-radio">
                         <input type="radio" checked/>
                         Plain Text
 
@@ -93,10 +93,10 @@ function QuickCampaign(){
                         Unicode
                     </div>
                 </div>
-                <div className="row">
+                <div className="quickcampaign-row">
                     <label>Message Part </label>
 
-                    <div className="radio">
+                    <div className="quickcampaign-radio">
                         <input type="radio" checked/>
                         Singlepart
 
@@ -104,7 +104,7 @@ function QuickCampaign(){
                         Multipart
                     </div>
                 </div>
-                <div className="row">
+                <div className="quickcampaign-row">
                     <label>Message Text</label>
 
                     <div>
@@ -112,7 +112,7 @@ function QuickCampaign(){
                         rows="5"
                         placeholder="Original Message Text"></textarea>
 
-                        <p className="note">
+                        <p className="quickcampaign-note">
                             NOTE:XXXXX will be replaced by actual shortcode.
                         </p>
 
@@ -120,10 +120,10 @@ function QuickCampaign(){
                     </div>
                 </div>
 
-                <div className="row">
+                <div className="quickcampaign-row">
                     <label>Is ShortUrl Selected</label>
 
-                    <div className="radio">
+                    <div className="quickcampaign-radio">
                         <input type="radio"/>
                         Yes
 
@@ -131,17 +131,17 @@ function QuickCampaign(){
                         No
                     </div>
                 </div>
-                <div className="row">
+                <div className="quickcampaign-row">
                     <label>Entity ID</label>
                     <input type="text" placeholder="Enity ID"/>
                 </div>
-                <div className="row">
+                <div className="quickcampaign-row">
                     <label>Operator Template ID</label>
                     <input type="text" placeholder="Operator Template ID"/>
                 </div>
-                <div className="btns">
-                    <button className="submit">Submit</button>
-                    <button className="cancel">Cancel</button>
+                <div className="quickcampaign-btns">
+                    <button className="quickcampaign-submit">Submit</button>
+                    <button className="quickcampaign-cancel">Cancel</button>
                 </div>
             </div>
         </div>

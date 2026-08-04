@@ -10,69 +10,93 @@ function VMNReport() {
 
   return (
     <div className="vmn-report-container">
-      <h1 className="vmn-title">VMN Report</h1>
 
-      <div className="vmn-filter-card">
-        <div className="vmn-field">
+      <h1 className="vmn-report-title">
+        VMN Report
+      </h1>
+
+      {/* Filter Card */}
+      <div className="vmn-report-filter-card">
+
+        {/* From Date */}
+        <div className="vmn-report-field">
           <label>From Date:</label>
 
-          <div className="date-box">
+          <div className="vmn-report-date-box">
             <DatePicker
               selected={fromDate}
               onChange={(date) => setFromDate(date)}
               dateFormat="dd-MM-yyyy"
-              className="date-input"
+              className="vmn-report-date-input"
             />
-            <FaRegCalendarAlt className="calendar-icon" />
+
+            <FaRegCalendarAlt className="vmn-report-calendar-icon" />
           </div>
         </div>
 
-        <div className="vmn-field">
+        {/* To Date */}
+        <div className="vmn-report-field">
           <label>To Date:</label>
 
-          <div className="date-box">
+          <div className="vmn-report-date-box">
             <DatePicker
               selected={toDate}
               onChange={(date) => setToDate(date)}
               dateFormat="dd-MM-yyyy"
-              className="date-input"
+              className="vmn-report-date-input"
             />
-            <FaRegCalendarAlt className="calendar-icon" />
+
+            <FaRegCalendarAlt className="vmn-report-calendar-icon" />
           </div>
         </div>
 
-        <div className="vmn-field">
+        {/* VMN Numbers */}
+        <div className="vmn-report-field">
           <label>VMN Numbers:</label>
 
-          <select className="vmn-select">
-            <option>Select VMN Number</option>
-            <option>9876543210</option>
-            <option>9876543211</option>
+          <select className="vmn-report-select">
+            <option value="">Select VMN Number</option>
+            <option value="9876543210">9876543210</option>
+            <option value="9876543211">9876543211</option>
           </select>
         </div>
+
       </div>
 
-      <div className="btn-row">
-        <button className="submit-btn">Submit</button>
+      {/* Buttons */}
+      <div className="vmn-report-button-row">
 
-        <button className="download-btn">
+        <button className="vmn-report-submit-btn">
+          Submit
+        </button>
+
+        <button className="vmn-report-download-btn">
           <FaDownload />
           Download
         </button>
+
       </div>
 
-      <div className="table-top">
-        <h3>Total VMN Count: 0</h3>
+      {/* Table Top */}
+      <div className="vmn-report-table-top">
+
+        <h3 className="vmn-report-total-count">
+          Total VMN Count: 0
+        </h3>
 
         <input
           type="text"
           placeholder="Search VMN Report"
-          className="search-input"
+          className="vmn-report-search-input"
         />
+
       </div>
 
-      <div className="table-wrapper">
-        <table>
+      {/* Table */}
+      <div className="vmn-report-table-wrapper">
+
+        <table className="vmn-report-table">
+
           <thead>
             <tr>
               <th>VMN NUMBER</th>
@@ -86,13 +110,19 @@ function VMNReport() {
 
           <tbody>
             <tr>
-              <td colSpan="6" className="no-data">
+              <td
+                colSpan="6"
+                className="vmn-report-no-data"
+              >
                 No Data Available
               </td>
             </tr>
           </tbody>
+
         </table>
+
       </div>
+
     </div>
   );
 }

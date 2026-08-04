@@ -2,52 +2,68 @@ import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { FaRegCalendarAlt, FaDownload } from "react-icons/fa";
-import"../css/TemplateIdWiseReport.css";
+import "../css/TemplateIdWiseReport.css";
 
 function TemplateIdReport() {
   const [selectedDate, setSelectedDate] = useState(new Date());
 
   return (
-    <div className="template-report-container">
-      <h1 className="report-title">Template ID Report</h1>
+    <div className="templateidreport-container">
+
+      <h1 className="templateidreport-title">
+        Template ID Report
+      </h1>
 
       {/* Card */}
-      <div className="report-card">
-        <div className="left-section">
+      <div className="templateidreport-card">
+
+        <div className="templateidreport-leftSection">
           <label>Date:</label>
 
-          <div className="date-wrapper">
+          <div className="templateidreport-dateWrapper">
             <DatePicker
               selected={selectedDate}
               onChange={(date) => setSelectedDate(date)}
               dateFormat="dd-MM-yyyy"
-              className="date-input"
+              className="templateidreport-dateInput"
             />
-            <FaRegCalendarAlt className="calendar-icon" />
+
+            <FaRegCalendarAlt className="templateidreport-calendarIcon" />
           </div>
 
-          <button className="submit-btn">Submit</button>
+          <button className="templateidreport-submitBtn">
+            Submit
+          </button>
         </div>
 
-        <div className="right-section">
-          <button className="download-btn">
-            <FaDownload /> .csv
+        <div className="templateidreport-rightSection">
+
+          <button className="templateidreport-downloadBtn">
+            <FaDownload />
+            .csv
           </button>
 
-          <button className="download-btn">
-            <FaDownload /> .pdf
+          <button className="templateidreport-downloadBtn">
+            <FaDownload />
+            .pdf
           </button>
+
         </div>
       </div>
 
       {/* Search */}
-      <div className="search-container">
-        <input type="text" placeholder="Enter Template ID" />
+      <div className="templateidreport-searchContainer">
+        <input
+          type="text"
+          placeholder="Enter Template ID"
+        />
       </div>
 
       {/* Table */}
-      <div className="table-container">
-        <table>
+      <div className="templateidreport-tableContainer">
+
+        <table className="templateidreport-table">
+
           <thead>
             <tr>
               <th>DATE</th>
@@ -61,12 +77,17 @@ function TemplateIdReport() {
 
           <tbody>
             <tr>
-              <td colSpan="6" className="no-data">
+              <td
+                colSpan="6"
+                className="templateidreport-noData"
+              >
                 No Data Available
               </td>
             </tr>
           </tbody>
+
         </table>
+
       </div>
     </div>
   );

@@ -11,51 +11,54 @@ function SenderIdWiseReport() {
   const data = [];
 
   return (
-    <div className="sender-report">
-      <h1 className="report-title">Sender ID Report</h1>
+   <div className="senderidwisereport-container">
+      <h1 className="senderidwisereport-title">Sender ID Report</h1>
 
       {/* Filter Section */}
-      <div className="report-card">
-        <div className="senderidwisereport-date-section">
+     <div className="senderidwisereport-card">
+       <div className="senderidwisereport-dateSection">
           <label>From Date:</label>
 
-          <div className="datepicker-wrapper">
+         <div className="senderidwisereport-datepickerWrapper">
             <DatePicker
               selected={fromDate}
               onChange={(date) => setFromDate(date)}
               dateFormat="dd-MM-yyyy"
             />
-            <FaCalendarAlt className="calendar-icon" />
+            <FaCalendarAlt className="senderidwisereport-calendarIcon" />
           </div>
         </div>
 
-        <div className="senderidwisereport-date-section">
+        <div className="senderidwisereportdateSection">
           <label>To Date:</label>
 
-          <div className="datepicker-wrapper">
-            <DatePicker
+          <div className="senderidwisereport-datepickerWrapper">
+          <DatePicker
               selected={toDate}
               onChange={(date) => setToDate(date)}
               dateFormat="dd-MM-yyyy"
             />
-            <FaCalendarAlt className="calendar-icon" />
+            <FaCalendarAlt className="senderidwisereport-calendarIcon" />
           </div>
         </div>
 
-        <div className="button-group">
-          <button className="submit-btn">Submit</button>
-          <button className="download-btn">Download</button>
+        <div className="senderidwisereport-buttonGroup">
+          <button className="senderidwisereport-submitBtn">Submit</button>
+          <button className="senderidwisereport-downloadBtn">Download</button>
         </div>
       </div>
 
       {/* Search */}
-      <div className="search-container">
-        <input type="text" placeholder="Enter Sender ID" />
+      <div className="senderidwisereport-searchContainer">
+        <input 
+          className="senderidwisereport-searchInput"
+        type="text" 
+        placeholder="Enter Sender ID" />
       </div>
 
       {/* Table */}
-      <div className="table-wrapper">
-        <table>
+     <div className="senderidwisereport-tableWrapper">
+        <table className="senderidwisereport-table">
           <thead>
             <tr>
               <th>SUMMARY DATE</th>
@@ -72,7 +75,7 @@ function SenderIdWiseReport() {
           <tbody>
             {data.length === 0 ? (
               <tr>
-                <td colSpan="8" className="no-data">
+                <td colSpan="8" className="senderidwisereport-noData">
                   No Data Available
                 </td>
               </tr>
@@ -94,7 +97,7 @@ function SenderIdWiseReport() {
         </table>
       </div>
 
-      <p className="entries-text">
+<p className="senderidwisereport-entriesText">
         There are total <strong>0</strong> entries
       </p>
     </div>
