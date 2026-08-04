@@ -1,4 +1,4 @@
-import Statcard from"../components/Statcard";
+import Statcard from "../components/Statcard";
 import Footer from "../components/Footer";
 import "../css/dashboard.css";
 
@@ -14,7 +14,7 @@ import {
   Legend,
 } from "chart.js";
 
-import {Bar, Line} from "react-chartjs-2";
+import { Bar, Line } from "react-chartjs-2";
 
 ChartJS.register(
   CategoryScale,
@@ -27,20 +27,27 @@ ChartJS.register(
   Legend
 );
 
-function Dashboard(){
-  const barData={
-    labels:["Request","Rejected","Submit","Delivered","Failed","Awaited"],
-    datasets:[
+function Dashboard() {
+  const barData = {
+    labels: [
+      "Request",
+      "Rejected",
+      "Submit",
+      "Delivered",
+      "Failed",
+      "Awaited",
+    ],
+    datasets: [
       {
-        label:"SMS Count",
-        data:[1200,150,1050,980,70,40],
-      backgroundColor:"#f4c542",
+        label: "SMS Count",
+        data: [1200, 150, 1050, 980, 70, 40],
+        backgroundColor: "#f4c542",
       },
     ],
   };
 
-  const lineData={
-    labels:[
+  const lineData = {
+    labels: [
       "0:00",
       "2:00",
       "4:00",
@@ -52,57 +59,75 @@ function Dashboard(){
       "16:00",
       "18:00",
       "20:00",
-      "22:00"
+      "22:00",
     ],
-    datasets:[
+    datasets: [
       {
-        label:"Hourly SMS",
-        data:[20,35,15,40,80,120,160,140,180,130,90,50],
-        borderColor:"#f4c542",
-        tension:0.4,
+        label: "Hourly SMS",
+        data: [20, 35, 15, 40, 80, 120, 160, 140, 180, 130, 90, 50],
+        borderColor: "#f4c542",
+        tension: 0.4,
       },
     ],
   };
-    return(
-      <div className="dashboard-page">
-        <div className="dashboard-content">
 
-        <div className="cards">
-      <Statcard
-        title="Today's SMS Count"
-           value="1200"
-          icon="📅"/>
+  return (
+    <div className="dashboard-page">
 
-        <Statcard
-        title="Current Month SMS Count"
-         value="28500"
-         icon="📅"/>
+      <div className="dashboard-content">
 
-        <Statcard
-         title="Available Credit"
-         value="15000"
-         icon="₹"/>
-         </div>
+        {/* Stat Cards */}
+        <div className="dashboard-cards">
 
-         {/*Chart Section*/}
+          <Statcard
+            title="Today's SMS Count"
+            value="1200"
+            icon="📅"
+          />
 
-         <div className="charts-container">
-          <div className="chart-box">
-            <h3>Today's SMS Count</h3>
-            <Bar data={barData}/>
+          <Statcard
+            title="Current Month SMS Count"
+            value="28500"
+            icon="📅"
+          />
+
+          <Statcard
+            title="Available Credit"
+            value="15000"
+            icon="₹"
+          />
+
+        </div>
+
+        {/* Charts */}
+        <div className="dashboard-charts-container">
+
+          {/* Bar Chart */}
+          <div className="dashboard-chart-box">
+            <h3 className="dashboard-chart-title">
+              Today's SMS Count
+            </h3>
+
+            <Bar data={barData} />
           </div>
 
-          <div className="chart-box">
-            <h3>Hourly SMS Summary</h3>
-            <Line data={lineData}/>
+          {/* Line Chart */}
+          <div className="dashboard-chart-box">
+            <h3 className="dashboard-chart-title">
+              Hourly SMS Summary
+            </h3>
+
+            <Line data={lineData} />
           </div>
-         </div>
-         </div>
-         
-         <Footer/>
-         </div>
-        
-        );
+
+        </div>
+
+      </div>
+
+      <Footer />
+
+    </div>
+  );
 }
 
 export default Dashboard;
